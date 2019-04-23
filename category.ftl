@@ -1,5 +1,5 @@
 <#include "module/macro.ftl">
-<@layout title="分类目录：${category.name} | ${options.blog_title!'Material'}" keywords="${options.seo_keywords!'Material'}}" description="${options.seo_desc!'Material'}}">
+<@layout title="分类目录：${category.name} | ${options.blog_title!'Material'}" keywords="${options.seo_keywords!'Material'}}" description="${options.seo_description!'Material'}}">
     <!-- Index Module -->
     <div class="material-index mdl-grid">
         <div class="locate-thumbnail-symbol"></div>

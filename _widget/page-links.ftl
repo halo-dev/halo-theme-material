@@ -88,7 +88,7 @@
 </style>
 
 <ul class="md-links">
-    <@commonTag method="links">
+    <@linkTag method="list">
         <#if links?? && links?size gt 0>
             <#list links! as link>
                 <li class="md-links-item">
@@ -100,7 +100,7 @@
                 </li>
             </#list>
         </#if>
-    </@commonTag>
+    </@linkTag>
 </ul>
 
 <script type="text/ls-javascript" id="page-links-script">

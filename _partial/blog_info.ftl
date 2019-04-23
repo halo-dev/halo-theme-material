@@ -53,18 +53,6 @@
             <span class="visuallyhidden">show menu</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            <!--
-            <% if(theme.busuanzi.all_site_uv === true) { %>
-            <a class="index_share-link" href="#">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                        <span id="busuanzi_container_site_uv">
-                            <span id="busuanzi_value_site_uv"></span>&nbsp;<%= __('post.views') %>
-                        </span>
-                </li>
-            </a>
-            <% } %>
-            -->
-
             <a class="index_share-link" href="/feed.xml">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     RSS订阅
@@ -72,7 +60,7 @@
             </a>
 
             <#if (options.theme_material_sns_share_weibo!'true')=='true'>
-            <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=<%= page.title %>&url=<%= config.url + url_for(path) %>&pic=<%- config.url + theme.head.favicon %>&searchPic=false&style=simple" target="_blank">
+            <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${options.blog_title!}&url=${options.blog_url!}&pic=${options.blog_favicon}&searchPic=false&style=simple" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Weibo
                 </li>
@@ -81,7 +69,7 @@
 
             <!-- Share Twitter -->
             <#if (options.theme_material_sns_share_twitter!'true')=='true'>
-            <a class="post_share-link" href="https://twitter.com/intent/tweet?text=<%= page.title %>&url=<%= config.url + url_for(path) %>&via=<%= config.author %>" target="_blank">
+            <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${options.blog_title!}&url=${options.blog_url!}&via=${user.nickName!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Twitter
                 </li>
@@ -89,7 +77,7 @@
             </#if>
 
             <#if (options.theme_material_sns_share_facebook!'true')=='true'>
-            <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=<%= config.url + url_for(path) %>" target="_blank">
+            <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${options.blog_url!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到FaceBook
                 </li>
@@ -97,7 +85,7 @@
             </#if>
 
             <#if (options.theme_material_sns_share_googleplus!'true')=='true'>
-            <a class="post_share-link" href="https://plus.google.com/share?url=<%= config.url + url_for(path) %>" target="_blank">
+            <a class="post_share-link" href="https://plus.google.com/share?url=${options.blog_url!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Google+
                 </li>
@@ -105,7 +93,7 @@
             </#if>
 
             <#if (options.theme_material_sns_share_linkedin!'true')=='true'>
-            <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- config.url + url_for(path) %>&title=<%= page.title %>" target="_blank">
+            <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${options.blog_url!}&title=${options.blog_title!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到LinkedIn
                 </li>
@@ -114,7 +102,7 @@
 
             <!-- Share QQ -->
             <#if (options.theme_material_sns_share_qq!'true')=='true'>
-            <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=<%= config.title %>&title=<%= page.title %>&summary=<%= config.description %>&pics=<%- config.url + theme.head.favicon %>&url=<%- config.url +  url_for(path) %>" target="_blank">
+            <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${options.blog_title!}&title=${options.blog_title!}&summary=${options.seo_description!}&pics=${options.blog_favicon!}&url=${options.blog_url!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到QQ
                 </li>
@@ -122,7 +110,7 @@
             </#if>
 
             <#if (options.theme_material_sns_share_telegram!'true')=='true'>
-            <a class="post_share-link" href="https://telegram.me/share/url?url=<%- config.url + url_for(path) %>&text=<%= page.title %>" target="_blank">
+            <a class="post_share-link" href="https://telegram.me/share/url?url=${options.blog_url!}&text=${options.blog_title!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Telegram
                 </li>

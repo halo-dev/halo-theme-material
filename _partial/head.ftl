@@ -106,23 +106,7 @@
     <% } %>
     -->
 
-    <!-- Structured-data for SEO -->
-    <#--
-    <% if(theme.head.structured_data === true) { %>
-    <%- partial('_partial/structured-data') %>
-    <% } %>
-    -->
-
     <!-- Analytics -->
     <@common.statistics />
-
-    <!-- Custom Head -->
-    <#--
-    <% if (site.data.head) { %>
-    <% for (var i in site.data.head) { %>
-    <%- site.data.head[i] %>
-    <% } %>
-    <% } %>
-    -->
 </head>
 </#macro>
