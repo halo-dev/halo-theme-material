@@ -30,13 +30,13 @@
     <title>${title!}</title>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="${setting.favicon!}">
-    <link rel="icon" href="${setting.high_res_favicon!}">
+    <link rel="icon shortcut" type="image/ico" href="${settings.favicon!}">
+    <link rel="icon" href="${settings.high_res_favicon!}">
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="${description}">
     <meta name="keywords" content="${keywords!}">
-    <meta name="theme-color" content="${setting.uiux_android_chrome_color!'#0097a7'}">
+    <meta name="theme-color" content="${settings.uiux_android_chrome_color!'#0097a7'}">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
     <meta http-equiv="Cache-Control" content="no-transform" />
@@ -58,10 +58,10 @@
     <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/material/source/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
     <#if post??>
-        <link rel="stylesheet" type="text/css" href="/material/source/prism/css/prism-${options.material_code_pretty!'Default'}.css" />
+        <link rel="stylesheet" type="text/css" href="/material/source/prism/css/prism-${settings.code_pretty!'Default'}.css" />
     </#if>
 
-    <#if (setting.scheme!'Paradox') == "Isolation">
+    <#if (settings.scheme!'Paradox') == "Isolation">
         <link rel="stylesheet" href="/material/source/css/fontawesome.min.css">
     </#if>
 

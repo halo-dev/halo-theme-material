@@ -60,7 +60,7 @@
             </a>
 
             <#if settings.sns_share_weibo!true>
-            <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${options.blog_title!}&url=${options.blog_url!}&pic=${options.blog_favicon}&searchPic=false&style=simple" target="_blank">
+            <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${options.blog_title!}&url=${options.blog_url!}&pic=${options.blog_favicon!}&searchPic=false&style=simple" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Weibo
                 </li>
