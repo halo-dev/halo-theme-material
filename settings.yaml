@@ -54,61 +54,61 @@ style:
       name: uiux_slogan
       label: Slogan
       type: text
-      default: Hi, nice to meet you
+      default: 'Hi, nice to meet you'
 
     uiux_card_elevation:
       name: uiux_card_elevation
       label: 卡片深度
       type: text
-      default: 2
+      default: '2'
 
     uiux_theme_color:
       name: uiux_theme_color
       label: 主题颜色
       type: text
-      default: #0097A7
+      default: '#0097A7'
 
     uiux_theme_sub_color:
       name: uiux_theme_sub_color
       label: 辅助颜色
       type: text
-      default: #00838F
+      default: '#00838F'
 
     uiux_hyperlink_color:
       name: uiux_hyperlink_color
       label: 超链接颜色
       type: text
-      default: #00838F
+      default: '#00838F'
 
     uiux_button_color:
       name: uiux_button_color
       label: 按钮颜色
       type: text
-      default: #757575
+      default: '#757575'
 
     uiux_android_chrome_color:
       name: uiux_android_chrome_color
       label: 安卓 Chrome 颜色
       type: text
-      default: #0097A7
+      default: '#0097A7'
 
     uiux_nprogress_color:
       name: uiux_nprogress_color
       label: NProgress 颜色
       type: text
-      default: #29d
+      default: '#29d'
 
     uiux_nprogress_buffer:
       name: uiux_nprogress_buffer
       label: NProgressBuffer
       type: text
-      default: 800
+      default: '800'
 
     background_purecolor:
       name: background_purecolor
       label: 背景颜色
       type: text
-      default: #F5F5F5
+      default: '#F5F5F5'
 
     background_bgimg:
       name: background_bgimg
