@@ -8,7 +8,7 @@
                 <!-- Post Header(Thumbnail & Title) -->
                 <#include "_partial/post-header.ftl">
 
-                <#if (options.theme_material_scheme!'Paradox') == "Paradox">
+                <#if (settings.scheme!'Paradox') == "Paradox">
                 <!-- Paradox Post Info -->
                 <#include "_partial/Paradox-post-info.ftl">
                 </#if>
@@ -16,7 +16,7 @@
                 <!-- Post Content -->
                 <#include "_partial/post-content.ftl">
 
-                <#if (options.theme_material_scheme!'Paradox') == "Isolation">
+                <#if (settings.scheme!'Paradox') == "Isolation">
                 <#include "_partial/Isolation-post-info.ftl">
                 </#if>
 

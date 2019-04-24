@@ -4,7 +4,7 @@
 </button>
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
     <!-- Share Weibo -->
-    <#if (options.theme_material_sns_share_weibo!'true')=='true'>
+    <#if settings.sns_share_weibo!true>
     <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${post.title}&url=${options.blog_url}/archives/${post.url}&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到Weibo
@@ -13,7 +13,7 @@
     </#if>
 
     <!-- Share Twitter -->
-    <#if (options.theme_material_sns_share_twitter!'true')=='true'>
+    <#if settings.sns_share_twitter!true>
     <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${post.title}&url=<${post.title}&url=${options.blog_url}/archives/${post.url}&via=${user.nickName!'Halo'}" target="_blank">
         <li class="mdl-menu__item">
             分享到Twitter
@@ -22,7 +22,7 @@
     </#if>
 
     <!-- Share Facebook -->
-    <#if (options.theme_material_sns_share_facebook!'true')=='true'>
+    <#if settings.sns_share_facebook!true>
     <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${options.blog_url}/archives/${post.url}" target="_blank">
         <li class="mdl-menu__item">
             分享到FaceBook
@@ -31,7 +31,7 @@
     </#if>
 
     <!-- Share Google+ -->
-    <#if (options.theme_material_sns_share_googleplus!'true')=='true'>
+    <#if settings.sns_share_googleplus!true>
     <a class="post_share-link" href="https://plus.google.com/share?url=${options.blog_url}/archives/${post.url}" target="_blank">
         <li class="mdl-menu__item">
             分享到Google+
@@ -40,7 +40,7 @@
     </#if>
 
     <!-- Share LinkedIn -->
-    <#if (options.theme_material_sns_share_linkedin!'true')=='true'>
+    <#if settings.sns_share_linkedin!true>
     <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${options.blog_url}/archives/${post.url}&title=${post.title}" target="_blank">
         <li class="mdl-menu__item">
             分享到LinkedIn
@@ -49,7 +49,7 @@
     </#if>
 
     <!-- Share QQ -->
-    <#if (options.theme_material_sns_share_qq!'true')=='true'>
+    <#if settings.sns_share_qq!true>
     <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${options.blog_title!}&title=${post.title}&summary=${post.summary!}&pics=&url=${options.blog_url}/archives/${post.url}" target="_blank">
         <li class="mdl-menu__item">
             分享到QQ
@@ -58,7 +58,7 @@
     </#if>
 
     <!-- Share Telegram -->
-    <#if (options.theme_material_sns_share_telegram!'true')=='true'>
+    <#if settings.sns_share_telegram!true>
     <a class="post_share-link" href="https://telegram.me/share/url?url=${options.blog_url}/archives/${post.url}&text=${post.title}" target="_blank">
         <li class="mdl-menu__item">
             分享到Telegram

@@ -32,7 +32,7 @@
         </span>
 
         <p class="header-slogan header-item">
-            ${options.theme_material_uiux_slogan!'Hi,nice to meet you'}
+            ${options.uiux_slogan!'Hi,nice to meet you'}
         </p>
 
         <!-- Header Nav -->

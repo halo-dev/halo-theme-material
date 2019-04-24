@@ -86,8 +86,8 @@ style:
       type: text
       default: #757575
 
-    footer_uiux_android_chrome_color:
-      name: footer_uiux_android_chrome_color
+    uiux_android_chrome_color:
+      name: uiux_android_chrome_color
       label: 安卓 Chrome 颜色
       type: text
       default: #0097A7

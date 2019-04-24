@@ -1,6 +1,6 @@
 <#list posts.content as post>
 <!-- Paradox Thumbnail -->
-<div class="post_entry-module mdl-card mdl-shadow--${options.theme_material_uiux_card_elevation!2}dp mdl-cell mdl-cell--12-col fade out">
+<div class="post_entry-module mdl-card mdl-shadow--${settings.uiux_card_elevation!2}dp mdl-cell mdl-cell--12-col fade out">
     <!-- Post Thumbnail -->
     <!-- Random Thumbnail -->
     <#if (post.thumbnail!) == "${options.blog_url}/static/halo-content/images/thumbnail.png">

@@ -3,7 +3,7 @@
 <script>lsloader.load("js_js","/material/source/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
 
 <#include "../_widget/nprogress.ftl">
-<#if (options.theme_material_other_js_smoothscroll!'true')=='true'>
+<#if (settings.other_js_smoothscroll!'true')=='true'>
     <script>lsloader.load("sm_js","/material/source/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
 </#if>
 <#include "footer-option.ftl">
@@ -32,12 +32,12 @@
 <!-- Window Load -->
 
 <!-- MathJax Load-->
-<#if (options.theme_material_other_mathjax!'true') == 'true'>
+<#if settings.other_mathjax!true>
 <#include "../_widget/mathjax.ftl">
 </#if>
 
 <!-- Bing Background -->
-<#if (options.theme_material_background_bing!'false')=="true">
+<#if settings.background_bing!false>
 <script type="text/ls-javascript" id="Bing-Background-script">
     queue.offer(function(){
         $('body').attr('data-original', 'https://api.i-meto.com/bing');

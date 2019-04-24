@@ -30,13 +30,13 @@
     <title>${title!}</title>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="${options.theme_material_favicon!}">
-    <link rel="icon" href="${options.theme_material_high_res_favicon!}">
+    <link rel="icon shortcut" type="image/ico" href="${setting.favicon!}">
+    <link rel="icon" href="${setting.high_res_favicon!}">
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="${description}">
     <meta name="keywords" content="${keywords!}">
-    <meta name="theme-color" content="${options.theme_material_footer_uiux_android_chrome_color!'#0097a7'}">
+    <meta name="theme-color" content="${setting.uiux_android_chrome_color!'#0097a7'}">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
     <meta http-equiv="Cache-Control" content="no-transform" />
@@ -61,7 +61,7 @@
         <link rel="stylesheet" type="text/css" href="/material/source/prism/css/prism-${options.material_code_pretty!'Default'}.css" />
     </#if>
 
-    <#if (options.theme_material_scheme!'Paradox') == "Isolation">
+    <#if (setting.scheme!'Paradox') == "Isolation">
         <link rel="stylesheet" href="/material/source/css/fontawesome.min.css">
     </#if>
 
@@ -73,12 +73,12 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="${title!}">
-    <meta name="msapplication-starturl" content="https://ryanc.cc/">
-    <meta name="msapplication-navbutton-color" content="${options.theme_material_footer_uiux_android_chrome_color!'#0097a7'}">
+    <meta name="msapplication-starturl" content="${options.blog_url!}">
+    <meta name="msapplication-navbutton-color" content="${settings.uiux_android_chrome_color!'#0097a7'}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="${title!}">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="${options.theme_material_apple_touch_icon!}">
+    <link rel="apple-touch-icon" href="${settings.apple_touch_icon!}">
 
     <!-- Site Verification -->
 
@@ -91,7 +91,7 @@
     <meta property="og:url" content="">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="${title!}">
-    <meta property="og:image" content="${options.theme_material_high_res_favicon!}">
+    <meta property="og:image" content="${settings.high_res_favicon!}">
     <meta property="og:description" content="${keywords!}">
 
     <!-- The Twitter Card protocol -->

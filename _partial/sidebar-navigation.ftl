@@ -19,7 +19,7 @@
     </li>
     <li class="divider"></li>
 
-    <#if (options.theme_material_other_sidebar_archives!'true') == 'true'>
+    <#if settings.other_sidebar_archives!true>
     <!-- Archives  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
@@ -41,7 +41,7 @@
     </li>
     </#if>
 
-    <#if (options.theme_material_other_sidebar_cates!'true') == 'true'>
+    <#if settings.other_sidebar_cates!true>
     <!-- Categories  -->
     <li class="dropdown">
         <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
@@ -75,7 +75,7 @@
         </#list>
     </@commonTag>
 
-    <#if (options.theme_material_other_sidebar_postcount!'true') == 'true'>
+    <#if settings.other_sidebar_postcount!true>
     <!-- Article Number  -->
     <li>
         <a href="${options.blog_url!}/archives">
