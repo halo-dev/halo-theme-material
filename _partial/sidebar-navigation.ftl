@@ -32,7 +32,7 @@
                 <#if archives??>
                     <#list archives?sort_by("year")?reverse as archive>
                         <li>
-                            <a class="sidebar_archives-link" href="${options.blog_url!}/archives/${archive.year}/${archive.month}/">${archive.month}月 ${archive.year}<span class="sidebar_archives-count">${archive.count}</span></a>
+                            <a class="sidebar_archives-link" href="${options.blog_url!}/archives/${archive.year}/${archive.month}/">${archive.month}月 ${archive.year}<span class="sidebar_archives-count">${archive.posts?size}</span></a>
                         </li>
                     </#list>
                 </#if>
