@@ -37,7 +37,7 @@
             <#if post.categories??>
                 <#list post.categories as cate>
                     <span class="post_entry-category">
-                      <a class="post_category-link" href="${options.blog_url!}/categories/${cate.url}/">${cate.name}</a>
+                      <a class="post_category-link" href="${options.blog_url!}/categories/${cate.slugName}/">${cate.name}</a>
                     </span>
                 </#list>
             </#if>

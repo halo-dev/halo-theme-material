@@ -28,7 +28,7 @@
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-            <@articleTag method="archives">
+            <@postTag method="archiveMonth">
                 <#if archives??>
                     <#list archives?sort_by("year")?reverse as archive>
                         <li>
@@ -36,7 +36,7 @@
                         </li>
                     </#list>
                 </#if>
-            </@articleTag>
+            </@postTag>
         </ul>
     </li>
     </#if>
@@ -50,39 +50,39 @@
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-            <@commonTag method="categories">
+            <@categoryTag method="list">
                 <#list categories as cate>
                     <li>
-                        <a class="sidebar_archives-link" href="${options.blog_url!}/categories/${cate.url}/">${cate.name}<span class="sidebar_archives-count">${cate.posts?size}</span></a>
+                        <a class="sidebar_archives-link" href="${options.blog_url!}/categories/${cate.slugName}/">${cate.name}<span class="sidebar_archives-count">${cate.posts?size}</span></a>
                     </li>
                 </#list>
-            </@commonTag>
+            </@categoryTag>
         </ul>
     </li>
     </#if>
 
     <!-- Pages  -->
-    <@commonTag method="menus">
-        <#list menus?sort_by("menuSort") as menu>
+    <@menuTag method="list">
+        <#list menus?sort_by("priority") as menu>
             <li>
-                <a href="${menu.menuUrl}" title="${menu.menuName}">
-                    <#if menu.menuIcon!="">
-                        <i class="material-icons sidebar-material-icons">${menu.menuIcon}</i>
+                <a href="${menu.url}" title="${menu.name}">
+                    <#if menu.icon!="">
+                        <i class="material-icons sidebar-material-icons">${menu.icon}</i>
                     </#if>
-                    ${menu.menuName}
+                    ${menu.name}
                 </a>
             </li>
         </#list>
-    </@commonTag>
+    </@menuTag>
 
     <#if settings.other_sidebar_postcount!true>
     <!-- Article Number  -->
     <li>
         <a href="${options.blog_url!}/archives">
             文章总数
-            <@articleTag method="postsCount">
-                <span class="sidebar-badge">${postsCount}</span>
-            </@articleTag>
+            <@postTag method="count">
+                <span class="sidebar-badge">${count}</span>
+            </@postTag>
         </a>
     </li>
     </#if>
