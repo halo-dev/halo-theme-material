@@ -2,7 +2,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="${user.avatar!'/material/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>

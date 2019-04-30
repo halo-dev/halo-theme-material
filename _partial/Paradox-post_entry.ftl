@@ -3,8 +3,8 @@
 <div class="post_entry-module mdl-card mdl-shadow--${settings.uiux_card_elevation!2}dp mdl-cell mdl-cell--12-col fade out">
     <!-- Post Thumbnail -->
     <!-- Random Thumbnail -->
-    <#if (post.thumbnail!) == "${options.blog_url}/static/halo-content/images/thumbnail.png">
-    <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+    <#if !post.thumbnail?? || post.thumbnail==''>
+    <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50 lazy" data-original="/${theme.folderName}/source/img/random/material-${randomMethod(1,20)}.png">
     <#else>
     <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="${post.thumbnail!}">
     </#if>
@@ -24,7 +24,7 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="${user.avatar!'/material/source/img/avatar.png'}" width="44px" height="44px"
+                <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" width="44px" height="44px"
                      alt="${user.nickName!'Halo'}'s avatar">
             </div>
             <div>

@@ -4,7 +4,7 @@
     <!-- Post Header Info -->
     <div class="post_entry-header_info without-thumbnail">
         <!-- Author Avatar & Name -->
-        <img src="${user.avatar!'/material/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickName!'Halo'}'s avatar">
+        <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickName!'Halo'}'s avatar">
         <span class="name-span">RYAN0UP</span>
     </div>
     <!-- Null Thumbnail -->

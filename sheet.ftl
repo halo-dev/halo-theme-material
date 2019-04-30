@@ -1,5 +1,5 @@
 <#include "module/macro.ftl">
-<@layout title="${sheet.title!} | ${options.blog_title!'Material'}" keywords="${options.seo_keywords!'Material'}" description="${sheet.summary!}">
+<@layout title="${post.title!} | ${options.blog_title!'Material'}" keywords="${options.seo_keywords!'Material'}" description="${post.summary!}">
     <!-- Post Module -->
     <div class="material-post_container">
         <div class="material-post mdl-grid">

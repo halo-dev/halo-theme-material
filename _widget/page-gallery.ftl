@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/material/source/css/gallery.min.css">
+<link rel="stylesheet" href="/${theme.folderName}/source/css/gallery.min.css">
 <body>
 <!-- Wrapper -->
 <div id="wrapper">
@@ -83,8 +83,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="/material/source/js/gallery/gallery.js"></script>
-<script>lsloader.load("lazyload_js","/material/source/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+<script src="/${theme.folderName}/source/js/gallery/gallery.js"></script>
+<script>lsloader.load("lazyload_js","/${theme.folderName}/source/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
 <script>
     queue.offer(function(){
         $('.lazy').lazyload({

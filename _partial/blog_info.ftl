@@ -7,7 +7,7 @@
     <!-- LOGO -->
     <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
         <a href="#" target="_blank">
-            <img src="${options.blog_logo!'/material/source/img/logo.png'}" alt="logo" />
+            <img src="${options.blog_logo!'/${theme.folderName}/source/img/logo.png'}" alt="logo" />
         </a>
     </div>
 

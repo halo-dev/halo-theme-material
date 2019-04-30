@@ -53,7 +53,7 @@
             <@categoryTag method="list">
                 <#list categories as cate>
                     <li>
-                        <a class="sidebar_archives-link" href="${options.blog_url!}/categories/${cate.slugName}/">${cate.name}<span class="sidebar_archives-count">${cate.posts?size}</span></a>
+                        <a class="sidebar_archives-link" href="${options.blog_url!}/categories/${cate.slugName}/">${cate.name}<span class="sidebar_archives-count">${cate.postCount!0}</span></a>
                     </li>
                 </#list>
             </@categoryTag>

@@ -16,7 +16,7 @@
                     </a>
                 </#if>
             </#if>
-            <span class="page-number current">${posts.page+1}</span>
+            <span class="page-number current">${posts.number+1}</span>
             <#if posts.hasNext()>
                 <a class="extend next" rel="next" href="${url}page/${posts.number+2}">
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">

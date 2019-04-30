@@ -1,10 +1,10 @@
 <!-- Import JS File -->
-<script>lsloader.load("lazyload_js","/material/source/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
-<script>lsloader.load("js_js","/material/source/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+<script>lsloader.load("lazyload_js","/${theme.folderName}/source/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+<script>lsloader.load("js_js","/${theme.folderName}/source/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
 
 <#include "../_widget/nprogress.ftl">
-<#if (settings.other_js_smoothscroll!'true')=='true'>
-    <script>lsloader.load("sm_js","/material/source/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+<#if settings.other_js_smoothscroll!true>
+    <script>lsloader.load("sm_js","/${theme.folderName}/source/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
 </#if>
 <#include "footer-option.ftl">
 <!-- UC Browser Compatible -->
@@ -17,7 +17,7 @@
 </script>
 
 <#if post??>
-<script type="text/javascript" src="/material/source/prism/js/prism.js"></script>
+<script type="text/javascript" src="/${theme.folderName}/source/prism/js/prism.js"></script>
 </#if>
 
 <#--
