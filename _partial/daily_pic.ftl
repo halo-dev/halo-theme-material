@@ -14,7 +14,7 @@
             <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" width="32px" height="32px" alt="avatar">
         </div>
         <div>
-            <strong>${user.nickName!'Material'}</strong>
+            <strong>${user.nickname!'Material'}</strong>
         </div>
     </div>
 </div>

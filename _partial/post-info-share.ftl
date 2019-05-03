@@ -14,7 +14,7 @@
 
     <!-- Share Twitter -->
     <#if settings.sns_share_twitter!true>
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${post.title}&url=<${post.title}&url=${options.blog_url}/archives/${post.url}&via=${user.nickName!'Halo'}" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${post.title}&url=<${post.title}&url=${options.blog_url}/archives/${post.url}&via=${user.nickname!'Halo'}" target="_blank">
         <li class="mdl-menu__item">
             分享到Twitter
         </li>

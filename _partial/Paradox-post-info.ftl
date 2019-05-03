@@ -6,7 +6,7 @@
     </div>
     <!-- Author Name & Date -->
     <div>
-        <strong>${user.nickName!'Halo'}</strong>
+        <strong>${user.nickname!'Halo'}</strong>
         <span>${post.createTime?string("MM月 dd,yyyy")}</span>
     </div>
 

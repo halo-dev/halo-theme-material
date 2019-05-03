@@ -25,10 +25,10 @@
             <!-- Author Avatar -->
             <div id="author-avatar">
                 <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" width="44px" height="44px"
-                     alt="${user.nickName!'Halo'}'s avatar">
+                     alt="${user.nickname!'Halo'}'s avatar">
             </div>
             <div>
-                <strong>${user.nickName!'Material'}</strong>
+                <strong>${user.nickname!'Material'}</strong>
                 <span>${post.createTime?string("MM月 dd,yyyy")}</span>
             </div>
         </div>

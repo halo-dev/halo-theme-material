@@ -69,7 +69,7 @@
 
             <!-- Share Twitter -->
             <#if settings.sns_share_twitter!true>
-            <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${options.blog_title!}&url=${options.blog_url!}&via=${user.nickName!}" target="_blank">
+            <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${options.blog_title!}&url=${options.blog_url!}&via=${user.nickname!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Twitter
                 </li>

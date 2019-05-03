@@ -12,7 +12,7 @@
             <ul>
                 <li>
                     <a href="#footer" class="icon fa-info-circle">
-                        ©&nbsp;${user.nickName!'Halo'}
+                        ©&nbsp;${user.nickname!'Halo'}
                     </a>
                 </li>
             </ul>
