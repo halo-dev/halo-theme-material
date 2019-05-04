@@ -21,6 +21,7 @@
                 </#if>
 
                 <#include "_partial/comment.ftl">
+                <@comment post=post type="post" />
             </div>
             <!-- Post Prev & Next Nav -->
             <#include "_partial/post-nav.ftl">

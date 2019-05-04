@@ -8,7 +8,7 @@
     <div id="copyright">
         Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>${options.blog_title!}
         <br>
-        ${options.blog_footer!}
+        ${options.blog_footer_info!}
     </div>
 
     <!-- Paradox Footer Right Section -->

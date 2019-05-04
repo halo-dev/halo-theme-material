@@ -21,6 +21,7 @@
                 </#if>
 
                 <#include "_partial/comment.ftl">
+                <@comment post=sheet type="sheet" />
             </div>
         </div>
     </div>
