@@ -26,7 +26,7 @@
 
         <!-- Header Title -->
         <span class="header-title header-item">
-            <a href="${options.blog_url!}/" title="${options.blog_title!}">
+            <a href="${ctx!}/" title="${options.blog_title!}">
                 ${options.blog_title!}
             </a>
         </span>
@@ -38,7 +38,7 @@
         <!-- Header Nav -->
         <nav class="header-nav header-item">
             <span class="header-nav-item">
-                <a href="${options.blog_url!}/" title="Home">
+                <a href="${ctx!}/" title="Home">
                     <span>主页</span>
                 </a>
             </span>
@@ -46,25 +46,25 @@
             <!-- Pages  -->
 
             <span class="header-nav-item">
-                <a href="${options.blog_url!}/tags" title="标签">
+                <a href="${ctx!}/tags" title="标签">
                     <span>标签</span>
                 </a>
             </span>
 
             <span class="header-nav-item">
-                <a href="${options.blog_url!}/gallery" title="图库">
+                <a href="${ctx!}/gallery" title="图库">
                     <span>图库</span>
                 </a>
             </span>
 
             <span class="header-nav-item">
-                <a href="${options.blog_url!}/links" title="友链">
+                <a href="${ctx!}/links" title="友链">
                     <span>友链</span>
                 </a>
             </span>
 
             <span class="header-nav-item">
-                <a href="${options.blog_url!}/about" title="关于">
+                <a href="${ctx!}/about" title="关于">
                     <span>关于</span>
                 </a>
             </span>

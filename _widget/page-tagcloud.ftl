@@ -32,7 +32,7 @@
         <@tagTag method="list">
             <#if tags?? && tags?size gt 0>
                 <#list tags as tag>
-                    <a href="${options.blog_url!}/tags/${tag.slugName}/" style="font-size: 22.33px; color: #757575">${tag.name}</a>
+                    <a href="${ctx!}/tags/${tag.slugName}/" style="font-size: 22.33px; color: #757575">${tag.name}</a>
                 </#list>
             </#if>
         </@tagTag>

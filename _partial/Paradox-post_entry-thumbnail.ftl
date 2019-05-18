@@ -5,7 +5,7 @@
         randomNum = Math.floor(Math.random() * 19 + 1);
 
         locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/${theme.folderName}/source/img/random/material-' + randomNum + '.png');
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/${static!}/source/img/random/material-' + randomNum + '.png');
         $('.post_thumbnail-random').addClass('lazy');
         locatePost = locatePost.next();
     }

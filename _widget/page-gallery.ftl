@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/${theme.folderName}/source/css/gallery.min.css">
+<link rel="stylesheet" href="/${static!}/source/css/gallery.min.css">
 <body>
 <!-- Wrapper -->
 <div id="wrapper">
@@ -6,7 +6,7 @@
     <!-- Header -->
     <header id="header">
         <h1>
-            <a href="${options.blog_url!}/"><strong>${options.blog_title!}</strong></a> - 图库
+            <a href="${ctx!}/"><strong>${options.blog_title!}</strong></a> - 图库
         </h1>
         <nav>
             <ul>
@@ -83,8 +83,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="/${theme.folderName}/source/js/gallery/gallery.js"></script>
-<script>lsloader.load("lazyload_js","/${theme.folderName}/source/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+<script src="/${static!}/source/js/gallery/gallery.js"></script>
+<script>lsloader.load("lazyload_js","/${static!}/source/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
 <script>
     queue.offer(function(){
         $('.lazy').lazyload({

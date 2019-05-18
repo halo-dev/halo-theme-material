@@ -12,7 +12,7 @@
     </li>
     <!-- Homepage -->
     <li id="sidebar-first-li">
-        <a href="${options.blog_url!}/">
+        <a href="${ctx!}/">
             <i class="material-icons sidebar-material-icons">home</i>
             主页
         </a>
@@ -32,7 +32,7 @@
                 <#if archives??>
                     <#list archives?sort_by("year")?reverse as archive>
                         <li>
-                            <a class="sidebar_archives-link" href="${options.blog_url!}/archives/${archive.year}/${archive.month}/">${archive.month}月 ${archive.year?c}<span class="sidebar_archives-count">${archive.posts?size}</span></a>
+                            <a class="sidebar_archives-link" href="${ctx!}/archives/${archive.year}/${archive.month}/">${archive.month}月 ${archive.year?c}<span class="sidebar_archives-count">${archive.posts?size}</span></a>
                         </li>
                     </#list>
                 </#if>
@@ -53,7 +53,7 @@
             <@categoryTag method="list">
                 <#list categories as cate>
                     <li>
-                        <a class="sidebar_archives-link" href="${options.blog_url!}/categories/${cate.slugName}/">${cate.name}<span class="sidebar_archives-count">${cate.postCount!0}</span></a>
+                        <a class="sidebar_archives-link" href="${ctx!}/categories/${cate.slugName}/">${cate.name}<span class="sidebar_archives-count">${cate.postCount!0}</span></a>
                     </li>
                 </#list>
             </@categoryTag>
@@ -78,7 +78,7 @@
     <#if settings.other_sidebar_postcount!true>
     <!-- Article Number  -->
     <li>
-        <a href="${options.blog_url!}/archives">
+        <a href="${ctx!}/archives">
             文章总数
             <@postTag method="count">
                 <span class="sidebar-badge">${count}</span>

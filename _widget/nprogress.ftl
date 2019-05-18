@@ -1,4 +1,4 @@
-<script>lsloader.load("np_js","/${theme.folderName}/source/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+<script>lsloader.load("np_js","/${static!}/source/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
 
 <script type="text/ls-javascript" id="NProgress-script">
     NProgress.configure({

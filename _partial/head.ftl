@@ -43,8 +43,8 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="/${theme.folderName}/source/css/ie-blocker.css">
-    <script src="/${theme.folderName}/source/js/ie-blocker.zhCN.js"></script>
+    <link rel="stylesheet" href="/${static!}/source/css/ie-blocker.css">
+    <script src="/${static!}/source/js/ie-blocker.zhCN.js"></script>
     <![endif]-->
 
     <!-- Import lsloader -->
@@ -54,26 +54,26 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Import CSS -->
-    <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/${theme.folderName}/source/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-    <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/${theme.folderName}/source/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/${static!}/source/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/${static!}/source/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
     <#if post??>
-        <link rel="stylesheet" type="text/css" href="/${theme.folderName}/source/prism/css/prism-${settings.code_pretty!'Default'}.css" />
+        <link rel="stylesheet" type="text/css" href="/${static!}/source/prism/css/prism-${settings.code_pretty!'Default'}.css" />
     </#if>
 
     <#if (settings.scheme!'Paradox') == "Isolation">
-        <link rel="stylesheet" href="/${theme.folderName}/source/css/fontawesome.min.css">
+        <link rel="stylesheet" href="/${static!}/source/css/fontawesome.min.css">
     </#if>
 
     <#include "../_partial/config_css.ftl">
 
     <!-- Import jQuery -->
-    <script>lsloader.load("jq_js","/${theme.folderName}/source/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    <script>lsloader.load("jq_js","/${static!}/source/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="${title!}">
-    <meta name="msapplication-starturl" content="${options.blog_url!}">
+    <meta name="msapplication-starturl" content="${ctx!}">
     <meta name="msapplication-navbutton-color" content="${settings.uiux_android_chrome_color!'#0097a7'}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="${title!}">

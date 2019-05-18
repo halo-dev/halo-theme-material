@@ -1,7 +1,7 @@
 <#if (settings.scheme!'Paradox') == "Paradox">
     <!-- Paradox Post Header -->
     <!-- Random Thumbnail -->
-    <#if (post.thumbnail!) == "${options.blog_url!}/static/halo-content/images/thumbnail.png">
+    <#if (post.thumbnail!) == "${ctx!}/static/halo-content/images/thumbnail.png">
     <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
     <#include "Paradox-post-thumbnail.ftl">
     <#else>
@@ -15,7 +15,7 @@
 <#if (settings.scheme!'Paradox') == "Isolation">
     <div class="post-header_info without-thumbnail">
         <!-- Author Avatar & Name -->
-        <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!'Halo'}'s avatar">
+        <img src="${user.avatar!'/${static!}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!'Halo'}'s avatar">
         <span class="name-span">${user.nickname!'Halo'}</span>
     </div>
 </#if>

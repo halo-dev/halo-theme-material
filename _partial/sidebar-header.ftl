@@ -1,4 +1,4 @@
-<div class="sidebar-header header-cover" style="background-image: url(${settings.sidebar_header!'/${theme.folderName}/source/img/sidebar_header.png'});">
+<div class="sidebar-header header-cover" style="background-image: url(${settings.sidebar_header!'/${static!}/source/img/sidebar_header.png'});">
     <!-- Top bar -->
     <div class="top-bar"></div>
 
@@ -13,7 +13,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="${user.avatar!'/${theme.folderName}/source/img/avatar.png'}" alt="${user.nickname!'Halo'}'s avatar">
+        <img src="${user.avatar!'/${static!}/source/img/avatar.png'}" alt="${user.nickname!'Halo'}'s avatar">
     </div>
 
     <!-- Sidebar Email -->
