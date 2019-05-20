@@ -2,7 +2,7 @@
 
     <!-- Prev Nav -->
     <#if prePost??>
-    <a href="${ctx!}/archives/${prePost.url!}" id="post_nav-newer" class="prev-content">
+    <a href="${context!}/archives/${prePost.url!}" id="post_nav-newer" class="prev-content">
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
             <i class="material-icons">arrow_back</i>
         </button>
@@ -15,7 +15,7 @@
 
     <!-- Next Nav -->
     <#if nextPost??>
-    <a href="${ctx!}/archives/${nextPost.url!}" id="post_nav-older" class="next-content">
+    <a href="${context!}/archives/${nextPost.url!}" id="post_nav-older" class="next-content">
         旧篇
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

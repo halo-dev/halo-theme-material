@@ -14,7 +14,7 @@
             <#include "_partial/Isolation-post_entry.ftl">
         </#if>
         <#include "_partial/index-nav.ftl">
-        <@nav url="${ctx!}/tags/${tag.slugName}/"></@nav>
+        <@nav url="${context!}/tags/${tag.slugName}/"></@nav>
         <#if (settings.scheme!'Paradox') == "Paradox">
             <#include "_partial/Paradox-post_entry-thumbnail.ftl">
         </#if>

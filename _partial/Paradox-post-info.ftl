@@ -2,7 +2,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="${user.avatar!'/${static!}/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="${user.avatar!'${static!}/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -35,7 +35,7 @@
         <#if post.tags??>
             <#list post.tags as tag>
                 <li class="mdl-menu__item">
-                    <a class="post_tag-link" href="${ctx!}/tags/${tag.slugName}/">${tag.name}</a>
+                    <a class="post_tag-link" href="${context!}/tags/${tag.slugName}/">${tag.name}</a>
                 </li>
             </#list>
         </#if>

@@ -7,7 +7,7 @@
     <!-- LOGO -->
     <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
         <a href="#" target="_blank">
-            <img src="${options.blog_logo!'/${static!}/source/img/logo.png'}" alt="logo" />
+            <img src="${options.blog_logo!'${static!}/source/img/logo.png'}" alt="logo" />
         </a>
     </div>
 
@@ -25,7 +25,7 @@
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            <a class="index_share-link" href="${ctx!}/tags" title="标签">
+            <a class="index_share-link" href="${context!}/tags" title="标签">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     标签
                 </li>
@@ -60,7 +60,7 @@
             </a>
 
             <#if settings.sns_share_weibo!true>
-            <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${options.blog_title!}&url=${ctx!}&pic=${options.blog_favicon!}&searchPic=false&style=simple" target="_blank">
+            <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${options.blog_title!}&url=${context!}&pic=${options.blog_favicon!}&searchPic=false&style=simple" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Weibo
                 </li>
@@ -69,7 +69,7 @@
 
             <!-- Share Twitter -->
             <#if settings.sns_share_twitter!true>
-            <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${options.blog_title!}&url=${ctx!}&via=${user.nickname!}" target="_blank">
+            <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${options.blog_title!}&url=${context!}&via=${user.nickname!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Twitter
                 </li>
@@ -77,7 +77,7 @@
             </#if>
 
             <#if settings.sns_share_facebook!true>
-            <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${ctx!}" target="_blank">
+            <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${context!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到FaceBook
                 </li>
@@ -85,7 +85,7 @@
             </#if>
 
             <#if settings.sns_share_googleplus!true>
-            <a class="post_share-link" href="https://plus.google.com/share?url=${ctx!}" target="_blank">
+            <a class="post_share-link" href="https://plus.google.com/share?url=${context!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Google+
                 </li>
@@ -93,7 +93,7 @@
             </#if>
 
             <#if settings.sns_share_linkedin!true>
-            <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${ctx!}&title=${options.blog_title!}" target="_blank">
+            <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${context!}&title=${options.blog_title!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到LinkedIn
                 </li>
@@ -102,7 +102,7 @@
 
             <!-- Share QQ -->
             <#if settings.sns_share_qq!true>
-            <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${options.blog_title!}&title=${options.blog_title!}&summary=${options.seo_description!}&pics=${options.blog_favicon!}&url=${ctx!}" target="_blank">
+            <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${options.blog_title!}&title=${options.blog_title!}&summary=${options.seo_description!}&pics=${options.blog_favicon!}&url=${context!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到QQ
                 </li>
@@ -110,7 +110,7 @@
             </#if>
 
             <#if settings.sns_share_telegram!true>
-            <a class="post_share-link" href="https://telegram.me/share/url?url=${ctx!}&text=${options.blog_title!}" target="_blank">
+            <a class="post_share-link" href="https://telegram.me/share/url?url=${context!}&text=${options.blog_title!}" target="_blank">
                 <li class="mdl-menu__item">
                     分享到Telegram
                 </li>
