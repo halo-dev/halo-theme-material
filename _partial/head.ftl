@@ -81,7 +81,6 @@
     <link rel="apple-touch-icon" href="${settings.apple_touch_icon!}">
 
     <!-- Site Verification -->
-
     <@common.verification />
 
     <!-- RSS -->
@@ -96,15 +95,6 @@
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    <#--
-    <% if( (page.current === 1) && (is_home()) ) { %>
-    <link rel="canonical" href="<%- config.url %>" />
-    <% } else { %>
-    <link rel="canonical" href="<%- config.url + url_for(path) %>" />
-    <% } %>
-    -->
 
     <!-- Analytics -->
     <@common.statistics />

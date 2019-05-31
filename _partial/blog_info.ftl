@@ -30,7 +30,7 @@
                     标签
                 </li>
             </a>
-            <a class="index_share-link" href="/gallery" title="图库">
+            <a class="index_share-link" href="/photos" title="图库">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     图库
                 </li>
@@ -40,7 +40,7 @@
                     友链
                 </li>
             </a>
-            <a class="index_share-link" href="/about" title="关于">
+            <a class="index_share-link" href="/s/about" title="关于">
                 <li class="mdl-menu__item mdl-js-ripple-effect">
                     关于
                 </li>

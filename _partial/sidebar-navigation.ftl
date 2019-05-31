@@ -19,27 +19,27 @@
     </li>
     <li class="divider"></li>
 
-    <#if settings.other_sidebar_archives!true>
-    <!-- Archives  -->
-    <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">inbox</i>
-            归档
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <@postTag method="archiveMonth">
-                <#if archives??>
-                    <#list archives?sort_by("year")?reverse as archive>
-                        <li>
-                            <a class="sidebar_archives-link" href="${context!}/archives/${archive.year}/${archive.month}/">${archive.month}月 ${archive.year?c}<span class="sidebar_archives-count">${archive.posts?size}</span></a>
-                        </li>
-                    </#list>
-                </#if>
-            </@postTag>
-        </ul>
-    </li>
-    </#if>
+<#--    <#if settings.other_sidebar_archives!true>-->
+<#--    <!-- Archives  &ndash;&gt;-->
+<#--    <li class="dropdown">-->
+<#--        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">-->
+<#--            <i class="material-icons sidebar-material-icons">inbox</i>-->
+<#--            归档-->
+<#--            <b class="caret"></b>-->
+<#--        </a>-->
+<#--        <ul class="dropdown-menu">-->
+<#--            <@postTag method="archiveMonth">-->
+<#--                <#if archives??>-->
+<#--                    <#list archives?sort_by("year")?reverse as archive>-->
+<#--                        <li>-->
+<#--                            <a class="sidebar_archives-link" href="${context!}/archives/${archive.year}/${archive.month}/">${archive.month}月 ${archive.year?c}<span class="sidebar_archives-count">${archive.posts?size}</span></a>-->
+<#--                        </li>-->
+<#--                    </#list>-->
+<#--                </#if>-->
+<#--            </@postTag>-->
+<#--        </ul>-->
+<#--    </li>-->
+<#--    </#if>-->
 
     <#if settings.other_sidebar_cates!true>
     <!-- Categories  -->

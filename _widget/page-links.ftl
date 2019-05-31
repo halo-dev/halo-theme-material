@@ -104,7 +104,7 @@
 </ul>
 
 <script type="text/ls-javascript" id="page-links-script">
-        var adjustFooter = function() {
+    var adjustFooter = function() {
         if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
             var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
             $('#bottom').css('bottom', '-' + footerBottom + 'px');

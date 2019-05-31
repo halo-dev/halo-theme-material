@@ -1,7 +1,7 @@
 <#if (settings.scheme!'Paradox') == "Paradox">
     <!-- Paradox Post Header -->
     <!-- Random Thumbnail -->
-    <#if (post.thumbnail!) == "${context!}/static/halo-content/images/thumbnail.png">
+    <#if (post.thumbnail!) == '' || !post.thumbnail??>
     <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
     <#include "Paradox-post-thumbnail.ftl">
     <#else>
