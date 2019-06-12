@@ -5,7 +5,7 @@
     <div class="post_entry-header_info without-thumbnail">
         <!-- Author Avatar & Name -->
         <img src="${user.avatar!'${static!}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!'Halo'}'s avatar">
-        <span class="name-span">RYAN0UP</span>
+        <span class="name-span">${user.nickname!}</span>
     </div>
     <!-- Null Thumbnail -->
     <div class="post_thumbnail-null">
