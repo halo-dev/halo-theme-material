@@ -15,32 +15,32 @@ general:
     favicon:
       name: favicon
       label: Favicon
-      type: text
+      type: attachment
 
     high_res_favicon:
       name: high_res_favicon
       label: 高清 Favicon
-      type: text
+      type: attachment
 
     apple_touch_icon:
       name: apple_touch_icon
       label: IOS 主屏按钮图标
-      type: text
+      type: attachment
 
     daily_pic:
       name: daily_pic
       label: daily_pic
-      type: text
+      type: attachment
 
     sidebar_header:
       name: sidebar_header
       label: Sidebar 顶部图片
-      type: text
+      type: attachment
 
     footer_image:
       name: footer_image
       label: Sidebar 底部图片
-      type: text
+      type: attachment
 
     copyright_since:
       name: copyright_since
@@ -65,37 +65,37 @@ style:
     uiux_theme_color:
       name: uiux_theme_color
       label: 主题颜色
-      type: text
+      type: color
       default: '#0097A7'
 
     uiux_theme_sub_color:
       name: uiux_theme_sub_color
       label: 辅助颜色
-      type: text
+      type: color
       default: '#00838F'
 
     uiux_hyperlink_color:
       name: uiux_hyperlink_color
       label: 超链接颜色
-      type: text
+      type: color
       default: '#00838F'
 
     uiux_button_color:
       name: uiux_button_color
       label: 按钮颜色
-      type: text
+      type: color
       default: '#757575'
 
     uiux_android_chrome_color:
       name: uiux_android_chrome_color
       label: 安卓 Chrome 颜色
-      type: text
+      type: color
       default: '#0097A7'
 
     uiux_nprogress_color:
       name: uiux_nprogress_color
       label: NProgress 颜色
-      type: text
+      type: color
       default: '#29d'
 
     uiux_nprogress_buffer:
@@ -107,13 +107,13 @@ style:
     background_purecolor:
       name: background_purecolor
       label: 背景颜色
-      type: text
+      type: color
       default: '#F5F5F5'
 
     background_bgimg:
       name: background_bgimg
       label: 背景图片
-      type: text
+      type: attachment
 
     background_bing:
       name: background_bing
