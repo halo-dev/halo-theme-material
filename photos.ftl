@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
-    <#include "_partial/head.ftl">
-    <@head title="图库 | ${options.blog_title!}" keywords="" description=""></@head>
-    <#include "_widget/page-gallery.ftl">
+    <#include "layout/_partial/head.ftl">
+    <@head title="图库 | ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/photos"></@head>
+    <#include "layout/_widget/page-gallery.ftl">
 </html>

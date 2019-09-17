@@ -3,7 +3,7 @@ general:
   items:
     scheme:
       name: scheme
-      label: Scheme
+      label: 主题样式
       type: select
       default: Paradox
       options:
@@ -29,7 +29,7 @@ general:
 
     daily_pic:
       name: daily_pic
-      label: daily_pic
+      label: 首页头图
       type: attachment
 
     sidebar_header:
@@ -42,17 +42,12 @@ general:
       label: Sidebar 底部图片
       type: attachment
 
-    copyright_since:
-      name: copyright_since
-      label: 站点成立时间
-      type: text
-
 style:
   label: 样式设置
   items:
     uiux_slogan:
       name: uiux_slogan
-      label: Slogan
+      label: 首页 Slogan
       type: text
       default: 'Hi, nice to meet you'
 
@@ -100,7 +95,7 @@ style:
 
     uiux_nprogress_buffer:
       name: uiux_nprogress_buffer
-      label: NProgressBuffer
+      label: NProgress 速度
       type: text
       default: '800'
 
@@ -109,6 +104,11 @@ style:
       label: 背景颜色
       type: color
       default: '#F5F5F5'
+
+    thumbnail_purecolor:
+      name: thumbnail_purecolor
+      label: 文章缩略图背景颜色
+      type: color
 
     background_bgimg:
       name: background_bgimg
@@ -127,26 +127,122 @@ style:
         - value: false
           label: 关闭
 
-    code_pretty:
-      name: code_pretty
-      label: 代码高亮
-      type: select
-      default: Default
+    prettify_enable:
+      name: prettify_enable
+      label: Prettify 代码高亮插件
+      type: radio
+      data-type: bool
+      default: false
       options:
-        - value: Default
-          label: Default
-        - value: Coy
-          label: Coy
-        - value: Dark
-          label: Dark
-        - value: Okaidia
-          label: Okaidia
-        - value: Solarized Light
-          label: Solarized Light
-        - value: Tomorrow Night
-          label: Tomorrow Night
-        - value: Twilight
-          label: Twilight
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+
+    prettify_theme:
+      name: prettify_theme
+      label: Prettify 代码高亮主题
+      type: select
+      default: github-v2
+      options:
+        - value: atelier-seaside-dark
+          label: atelier-seaside-dark
+        - value: atelier-plateau-light
+          label: atelier-plateau-light
+        - value: atelier-sulphurpool-dark
+          label: atelier-sulphurpool-dark
+        - value: tomorrow-night-blue
+          label: tomorrow-night-blue
+        - value: atelier-heath-dark
+          label: atelier-heath-dark
+        - value: vibrant-ink
+          label: vibrant-ink
+        - value: atelier-heath-light
+          label: atelier-heath-light
+        - value: atelier-dune-dark
+          label: atelier-dune-dark
+        - value: tranquil-heart
+          label: tranquil-heart
+        - value: atelier-estuary-light
+          label: atelier-estuary-light
+        - value: atelier-seaside-light
+          label: atelier-seaside-light
+        - value: tomorrow-night-eighties
+          label: tomorrow-night-eighties
+        - value: atelier-savanna-dark
+          label: atelier-savanna-dark
+        - value: atelier-forest-dark
+          label: atelier-forest-dark
+        - value: tomorrow-night
+          label: tomorrow-night
+        - value: atelier-lakeside-dark
+          label: atelier-lakeside-dark
+        - value: tomorrow
+          label: tomorrow
+        - value: atelier-forest-light
+          label: atelier-forest-light
+        - value: hemisu-dark
+          label: hemisu-dark
+        - value: github
+          label: github
+        - value: atelier-cave-light
+          label: atelier-cave-light
+        - value: github-v2
+          label: github-v2
+        - value: atelier-sulphurpool-light
+          label: atelier-sulphurpool-light
+        - value: atelier-plateau-dark
+          label: atelier-plateau-dark
+        - value: atelier-cave-dark
+          label: atelier-cave-dark
+        - value: tomorrow-night-bright
+          label: tomorrow-night-bright
+        - value: atelier-savanna-light
+          label: atelier-savanna-light
+        - value: atelier-estuary-dark
+          label: atelier-estuary-dark
+        - value: atelier-dune-light
+          label: atelier-dune-light
+        - value: atelier-lakeside-light
+          label: atelier-lakeside-light
+        - value: hemisu-light
+          label: hemisu-light
+
+    hanabi_enable:
+      name: hanabi_enable
+      label: Hanabi 代码高亮插件
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+
+    hanabi_line_number:
+      name: hanabi_line_number
+      label: Hanabi 是否显示行号
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+
+    post_qrcode_enable:
+      name: post_qrcode_enable
+      label: 文章二维码
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
 
 sns:
   label: 社交资料
@@ -214,6 +310,11 @@ sns:
     sns_v2ex:
       name: sns_v2ex
       label: V2EX
+      type: text
+
+    sns_segmentfault:
+      name: sns_segmentfault
+      label: Segmentfault
       type: text
 
 sns-share:
@@ -330,17 +431,17 @@ other:
         - value: false
           label: 关闭
 
-    other_sidebar_archives:
-      name: other_sidebar_archives
-      label: 侧边栏归档
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
+#    other_sidebar_archives:
+#      name: other_sidebar_archives
+#      label: 侧边栏归档
+#      type: radio
+#      data-type: bool
+#      default: true
+#      options:
+#        - value: true
+#          label: 开启
+#        - value: false
+#          label: 关闭
 
     other_sidebar_cates:
       name: other_sidebar_cates
@@ -371,7 +472,7 @@ other:
       label: MathJax 插件
       type: radio
       data-type: bool
-      default: true
+      default: false
       options:
         - value: true
           label: 开启
@@ -381,4 +482,9 @@ other:
     other_post_license:
       name: other_post_license
       label: 文章 License
+      type: textarea
+
+    sidebar_footer_content:
+      name: sidebar_footer_content
+      label: 侧边栏底部内容
       type: textarea

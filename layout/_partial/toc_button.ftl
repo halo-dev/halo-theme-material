@@ -1,0 +1,24 @@
+<#if (settings.scheme!'Paradox') == "Paradox">
+    <!-- Back Button -->
+<#--    <div class="material-back" id="backhome-div" tabindex="0">-->
+<#--        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"-->
+<#--           href="#" onclick="window.history.back();return false;"-->
+<#--           target="_self"-->
+<#--           role="button"-->
+<#--           data-upgraded=",MaterialButton,MaterialRipple">-->
+<#--            <i class="material-icons" role="presentation">arrow_back</i>-->
+<#--            <span class="mdl-button__ripple-container">-->
+<#--                <span class="mdl-ripple"></span>-->
+<#--            </span>-->
+<#--        </a>-->
+<#--    </div>-->
+    <!-- Left aligned menu below button -->
+<#--    <button id="post-toc-trigger-btn"-->
+<#--            class="mdl-button mdl-js-button mdl-button--icon">-->
+<#--        <i class="material-icons">format_list_numbered</i>-->
+<#--    </button>-->
+
+<#--    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">-->
+
+<#--    </ul>-->
+</#if>
