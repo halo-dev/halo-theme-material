@@ -1,5 +1,5 @@
 <#include "module/macro.ftl">
-<@layout title="${options.blog_title!'Material'}" keywords="${options.seo_keywords!'Material'}}" description="${options.seo_description!'Material'}}">
+<@layout title="${options.blog_title!}" keywords="${options.seo_keywords!}}" description="${options.seo_description!}}">
     <!-- Index Module -->
     <div class="material-index mdl-grid">
         <#if (settings.scheme!'Paradox') == "Paradox" && posts.number==0 && !isArchives??>

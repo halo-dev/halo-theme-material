@@ -1,5 +1,5 @@
 <#include "module/macro.ftl">
-<@layout title="搜索：${keyword} | ${options.blog_title!'Material'}" keywords="${options.seo_keywords!'Material'}}" description="${options.seo_description!'Material'}}">
+<@layout title="搜索：${keyword} | ${options.blog_title!}" keywords="${options.seo_keywords!}}" description="${options.seo_description!}}">
     <!-- Index Module -->
     <div class="material-index mdl-grid">
         <#if (settings.scheme!'Paradox') == "Paradox" && posts.number==0 && !isArchives??>
@@ -18,7 +18,7 @@
         <!-- Isolation Thumbnail -->
         <#include "_partial/Isolation-post_entry.ftl">
         </#if>
-        <#if posts.numbers gt 1 >
+        <#if posts.totalElements gt 0>
             <nav class="material-nav mdl-cell mdl-cell--12-col">
                 <#if posts.hasPrevious()>
                     <#if posts.number == 1>

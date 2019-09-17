@@ -28,7 +28,7 @@
                      alt="${user.nickname!'Halo'}'s avatar">
             </div>
             <div>
-                <strong>${user.nickname!'Material'}</strong>
+                <strong>${user.nickname!}</strong>
                 <span>${post.createTime?string("MM月 dd,yyyy")}</span>
             </div>
         </div>

@@ -21,15 +21,17 @@
 
     <!-- Main -->
     <div id="main">
-        <#list galleries as gallery>
-            <article class="thumb">
-                <a href="${gallery.thumbnail}" class="image lazy" data-original="${gallery.thumbnail}">
-                    <img class="lazy" data-original="${gallery.url}" alt="${gallery.description}" />
-                </a>
-                <h2>${gallery.name}</h2>
-                <p>${gallery.takeTime!}</p>
-            </article>
-        </#list>
+        <@photoTag method="list">
+            <#list photos as photo>
+                <article class="thumb">
+                    <a href="${photo.thumbnail}" class="image lazy" data-original="${photo.thumbnail}">
+                        <img class="lazy" data-original="${photo.url}" alt="${photo.description}" />
+                    </a>
+                    <h2>${photo.name}</h2>
+                    <p>${photo.takeTime!}</p>
+                </article>
+            </#list>
+        </@photoTag>
     </div>
     <!-- Footer -->
     <!--
