@@ -20,7 +20,7 @@
             <div>
                 Powered by <a href="https://halo.run" target="_blank" class="footer-develop-a">Halo</a>
                 <br>
-                Theme - <a href="https://github.com/halo-dev/halo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+                Theme - <a href="https://halo.run" target="_blank" class="footer-develop-a">Material</a>
             </div>
         </div>
 
