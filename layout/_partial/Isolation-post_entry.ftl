@@ -5,7 +5,7 @@
         <!-- Post Header Info -->
         <div class="post_entry-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="${user.avatar!'${static!}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!}'s avatar">
+            <img src="${user.avatar!'${theme_base!}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!}'s avatar">
             <span class="name-span">${user.nickname!}</span>
         </div>
 
@@ -15,7 +15,7 @@
         <!-- Post Header Info -->
         <div class="post_entry-header_info with-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="${user.avatar!'${static!}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!}'s avatar">
+            <img src="${user.avatar!'${theme_base!}/source/img/avatar.png'}" class="avatar-img" width="44px" height="44px" alt="${user.nickname!}'s avatar">
             <span class="name-span">${user.nickname!}</span>
         </div>
 
@@ -29,7 +29,7 @@
     <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
         <!-- Post Title -->
         <p class="post_entry-title">
-            <a href="${context!}/archives/${post.url}"><#if post.topPriority?? && post.topPriority!=0><span>[Top]</span></#if>${post.title!}</a>
+            <a href="${post.fullPath!}"><#if post.topPriority?? && post.topPriority!=0><span>[Top]</span></#if>${post.title!}</a>
         </p>
 
         <!-- Post Excerpt -->
@@ -37,7 +37,7 @@
             ${post.summary!}
             &nbsp;&nbsp;&nbsp;
             <span>
-                <a href="${context!}/archives/${post.url}" target="_self">阅读全文</a>
+                <a href="${post.fullPath!}" target="_self">阅读全文</a>
             </span>
         </p>
 
@@ -46,7 +46,7 @@
             <#if post.tags??>
                 <#list post.tags as tag>
                     <li class="post_entry-tags-list-item">
-                        <a class="post_entry-tags-list-link" href="${context!}/tags/${tag.slugName}/">${tag.name}</a>
+                        <a class="post_entry-tags-list-link" href="${tag.fullPath!}">${tag.name}</a>
                     </li>
                 </#list>
             </#if>

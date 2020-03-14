@@ -13,7 +13,7 @@
 
     <!-- Homepage -->
     <li id="sidebar-first-li">
-        <a href="${context!}">
+        <a href="${blog_url!}">
             <i class="material-icons sidebar-material-icons">home</i>
             主页
         </a>
@@ -55,9 +55,9 @@
             </a>
             <ul class="dropdown-menu">
                 <@categoryTag method="list">
-                    <#list categories as cate>
+                    <#list categories as category>
                         <li>
-                            <a class="sidebar_archives-link" href="${context!}/categories/${cate.slugName}/">${cate.name}<span class="sidebar_archives-count">${cate.postCount!0}</span></a>
+                            <a class="sidebar_archives-link" href="${category.fullPath!}">${category.name}<span class="sidebar_archives-count">${category.postCount!0}</span></a>
                         </li>
                     </#list>
                 </@categoryTag>
@@ -69,7 +69,7 @@
     <@menuTag method="list">
         <#list menus?sort_by("priority") as menu>
             <li>
-                <a href="${menu.url!}" title="${menu.name!}">
+                <a href="${menu.url!}" title="${menu.name!}" target="${menu.target!}">
                     <#if menu.icon?? && menu.icon != ''>
                         <i class="material-icons sidebar-material-icons">${menu.icon}</i>
                     </#if>
@@ -83,10 +83,10 @@
     <!-- Article Number  -->
     <#if settings.other_sidebar_postcount!true>
         <li>
-            <a href="${context!}/archives">
+            <a href="${archives_url!}">
                 文章总数
                 <@postTag method="count">
-                    <span class="sidebar-badge">${count}</span>
+                    <span class="sidebar-badge">${count!0}</span>
                 </@postTag>
             </a>
         </li>

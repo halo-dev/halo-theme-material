@@ -1,4 +1,4 @@
-<#macro head title,keywords,description,canonical>
+<#macro head title,canonical>
 <head>
     <meta charset="utf-8">
     <!--
@@ -37,8 +37,8 @@
     <link rel="icon" href="${settings.high_res_favicon!}">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="${description!}">
-    <meta name="keywords" content="${keywords!}">
+    <meta name="description" itemprop="description" content="${meta_description!}">
+    <meta name="keywords" content="${meta_keywords!}">
     <meta name="theme-color" content="${settings.uiux_android_chrome_color!'#0097a7'}">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -46,8 +46,8 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
-        <link rel="stylesheet" href="${static!}/source/css/ie-blocker.css">
-        <script src="${static!}/source/js/ie-blocker.zhCN.js"></script>
+        <link rel="stylesheet" href="${theme_base!}/source/css/ie-blocker.css">
+        <script src="${theme_base!}/source/js/ie-blocker.zhCN.js"></script>
     <![endif]-->
 
     <!-- Import lsloader -->
@@ -57,46 +57,46 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Import CSS -->
-    <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","${static!}/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-    <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","${static!}/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","${theme_base!}/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","${theme_base!}/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
     <#if settings.prettify_enable!false>
         <#if is_post?? || is_sheet??>
-            <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","${static!}/source/css/prettify.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-            <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","${static!}/source/css/prettify/${settings.prettify_theme!}.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","${theme_base!}/source/css/prettify.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","${theme_base!}/source/css/prettify/${settings.prettify_theme!}.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
         </#if>
     </#if>
 
     <#if (settings.scheme!'Paradox') == "Isolation">
-        <link rel="stylesheet" href="${static!}/source/css/fontawesome.min.css">
+        <link rel="stylesheet" href="${theme_base!}/source/css/fontawesome.min.css">
     </#if>
 
     <#include "../_partial/config_css.ftl">
 
     <!-- Import jQuery -->
-    <script>lsloader.load("jq_js","${static!}/source/js/jquery.min.js", true)</script>
+    <script>lsloader.load("jq_js","${theme_base!}/source/js/jquery.min.js", true)</script>
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="${options.blog_title!}">
+    <meta name="application-name" content="${blog_title!}">
     <meta name="msapplication-starturl" content="${canonical!}">
     <meta name="msapplication-navbutton-color" content="${settings.uiux_android_chrome_color!'#0097a7'}">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="${options.blog_title!}">
+    <meta name="apple-mobile-web-app-title" content="${blog_title!}">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="${settings.apple_touch_icon!}">
 
     <!-- RSS -->
-    <link rel=alternate type="application/atom+xml" href="${context!}/atom.xml">
-    <link rel=alternate type="application/rss+xml" href="${context!}/rss.xml">
+    <link rel=alternate type="application/atom+xml" href="${atom_url!}">
+    <link rel=alternate type="application/rss+xml" href="${rss_url!}">
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="${canonical!}">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="${options.blog_title!}">
+    <meta property="og:title" content="${blog_title!}">
     <meta property="og:image" content="${settings.high_res_favicon!}">
-    <meta property="og:description" content="${description!}">
-    <meta property="og:article:tag" content="${keywords!}">
+    <meta property="og:description" content="${meta_description!}">
+    <meta property="og:article:tag" content="${meta_keywords!}">
     <#if is_post??>
         <meta property="article:published_time" content="${post.createTime!}">
         <meta property="article:modified_time" content="${post.updateTime!}">

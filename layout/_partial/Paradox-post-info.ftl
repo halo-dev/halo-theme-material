@@ -2,7 +2,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="${user.avatar!'${static!}/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="${user.avatar!'${theme_base!}/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -34,7 +34,7 @@
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <#list post.tags as tag>
             <li class="mdl-menu__item">
-                <a class="post_tag-link" href="${context!}/tags/${tag.slugName}/">${tag.name}</a>
+                <a class="post_tag-link" href="${tag.fullPath!}">${tag.name}</a>
             </li>
         </#list>
     </ul>

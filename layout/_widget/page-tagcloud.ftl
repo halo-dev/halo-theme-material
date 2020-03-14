@@ -32,7 +32,7 @@
         <@tagTag method="list">
             <#if tags?? && tags?size gt 0>
                 <#list tags as tag>
-                    <a href="${context!}/tags/${tag.slugName}/" style="font-size: ${randomMethod(16,35)}px; color: #757575">${tag.name}</a>
+                    <a href="${tag.fullPath!}" style="font-size: ${randomMethod(16,35)}px; color: #757575">${tag.name}</a>
                 </#list>
             </#if>
         </@tagTag>

@@ -1,11 +1,11 @@
 <!-- Import JS File -->
-<script>lsloader.load("lazyload_js","${static!}/source/js/lazyload.min.js", true)</script>
-<script>lsloader.load("js_js","${static!}/source/js/js.min.js", true)</script>
+<script>lsloader.load("lazyload_js","${theme_base!}/source/js/lazyload.min.js", true)</script>
+<script>lsloader.load("js_js","${theme_base!}/source/js/js.min.js", true)</script>
 
 <#include "../_widget/nprogress.ftl">
 
 <#if settings.other_js_smoothscroll!true>
-    <script>lsloader.load("sm_js","${static!}/source/js/smoothscroll.js", true)</script>
+    <script>lsloader.load("sm_js","${theme_base!}/source/js/smoothscroll.js", true)</script>
 </#if>
 
 <#include "footer-option.ftl">
@@ -14,7 +14,7 @@
 <script>
 	var agent = navigator.userAgent.toLowerCase();
 	if(agent.indexOf('ucbrowser')>0) {
-		document.write('${static!}/source/css/uc.css');
+		document.write('${theme_base!}/source/css/uc.css');
 	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 	}
 </script>
@@ -22,12 +22,12 @@
 <!-- Import prettify js  -->
 <#if settings.prettify_enable!false>
     <#if is_post?? || is_sheet??>
-        <script>lsloader.load("prettify_js","${static!}/source/js/prettify.min.js", true)</script>
+        <script>lsloader.load("prettify_js","${theme_base!}/source/js/prettify.min.js", true)</script>
     </#if>
 </#if>
 
 <#if settings.hanabi_enable!false>
-    <script>lsloader.load("hanabi","${static!}/source/js/hanabi-browser-bundle.js", true)</script>
+    <script>lsloader.load("hanabi","${theme_base!}/source/js/hanabi-browser-bundle.js", true)</script>
 </#if>
 
 <!-- Window Load -->

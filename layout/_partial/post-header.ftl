@@ -14,7 +14,7 @@
         <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(${post.thumbnail!})">
     </#if>
             <p class="article-headline-p">
-                ${post.title}
+                ${post.title!}
             </p>
         </div>
 </#if>

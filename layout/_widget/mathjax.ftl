@@ -13,4 +13,4 @@
         }
     });
 </script>
-<script type="text/javascript" src="${static!}/source/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="${theme_base!}/source/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

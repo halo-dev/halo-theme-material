@@ -1,5 +1,5 @@
 <#include "layout/layout.ftl">
-<@layout title="${post.title!} | ${options.blog_title!}" keywords="${options.seo_keywords!},${tagWords!}" description="${post.summary!}" canonical="${context!}/s/${post.url!}">
+<@layout title="${post.title!} | ${blog_title!}" canonical="${sheet.fullPath!}">
     <!-- Post Module -->
     <div class="material-post_container">
 

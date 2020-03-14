@@ -5,17 +5,17 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "${options.blog_title!}",
+        "name": "${blog_title!}",
         "logo": "${settings.high_res_favicon!}"
     },
-    "url": "${context!}",
+    "url": "${blog_url!}",
     "image": {
         "@type": "ImageObject",
         "url": "${settings.apple_touch_icon!}"
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "${context!}"
+        "@id": "${blog_url!}"
     },
     "description": "${options.seo_description!}"
 }
@@ -27,7 +27,7 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "${context!}/archives/${post.url!}",
+    "mainEntityOfPage": "${post.fullPath!}",
     "headline": "${post.title!}",
     "datePublished": "${post.createTime!}",
     "dateModified": "${post.editTime!}",
@@ -42,7 +42,7 @@
     },
     "publisher": {
         "@type": "Organization",
-        "name": "${options.blog_title!}",
+        "name": "${blog_title!}",
         "logo": {
             "@type":"ImageObject",
             "url": "${settings.high_res_favicon!}"

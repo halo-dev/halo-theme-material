@@ -8,7 +8,7 @@
                     var fd = new Date();
                     document.write(fd.getFullYear());
                 </script>
-                &nbsp;${options.blog_title!}
+                &nbsp;${blog_title!}
             </div>
             <!--
             I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
@@ -26,8 +26,8 @@
 
         <!-- Header Title -->
         <span class="header-title header-item">
-            <a href="${context!}" title="${options.blog_title!}">
-                ${options.blog_title!}
+            <a href="${blog_url!}" title="${blog_title!}">
+                ${blog_title!}
             </a>
         </span>
 
@@ -38,7 +38,7 @@
         <!-- Header Nav -->
         <nav class="header-nav header-item">
             <span class="header-nav-item">
-                <a href="${context!}" title="Home">
+                <a href="${blog_url!}" title="Home">
                     <span>主页</span>
                 </a>
             </span>

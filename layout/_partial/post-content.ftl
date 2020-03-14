@@ -6,7 +6,7 @@
                     <p>
                         <strong>${settings.other_post_license!}</strong>
                         <br>
-                        <strong>本文链接：</strong><a href="${context!}/archives/${post.url}">${context!}/archives/${post.url}</a>
+                        <strong>本文链接：</strong><a href="${post.fullPath!}">${post.fullPath!}</a>
                     </p>
                 </blockquote>
         </#if>
@@ -23,7 +23,7 @@
                     <p>
                         <strong>${options.other_post_license!}</strong>
                         <br>
-                        <strong>本文链接：</strong><a href="${context!}/archives/${post.url}">${context!}/archives/${post.url}</a>
+                        <strong>本文链接：</strong><a href="${post.fullPath!}">${post.fullPath!}</a>
                     </p>
                 </blockquote>
             </#if>
