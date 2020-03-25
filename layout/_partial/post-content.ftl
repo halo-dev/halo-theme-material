@@ -21,7 +21,7 @@
             <#if settings.other_post_license??>
                 <blockquote>
                     <p>
-                        <strong>${options.other_post_license!}</strong>
+                        <strong>${settings.other_post_license!}</strong>
                         <br>
                         <strong>本文链接：</strong><a href="${post.fullPath!}">${post.fullPath!}</a>
                     </p>

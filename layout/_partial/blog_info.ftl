@@ -7,7 +7,7 @@
     <!-- LOGO -->
     <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
         <a href="${blog_url!}" target="_blank">
-            <img src="${options.blog_logo!'${theme_base!}/source/img/logo.png'}" alt="logo" />
+            <img src="${blog_logo!'${theme_base!}/source/img/logo.png'}" alt="logo" />
         </a>
     </div>
 
@@ -59,7 +59,7 @@
 
             <!-- Share Twitter -->
             <#if settings.sns_share_twitter!true>
-                <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${blog_title!}&url=${context!}&via=${user.nickname!}" target="_blank">
+                <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${blog_title!}&url=${blog_url!}&via=${user.nickname!}" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 Twitter
                     </li>
@@ -67,7 +67,7 @@
             </#if>
 
             <#if settings.sns_share_facebook!true>
-                <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${context!}" target="_blank">
+                <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${blog_url!}" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 Facebook
                     </li>
@@ -75,7 +75,7 @@
             </#if>
 
             <#if settings.sns_share_googleplus!true>
-                <a class="post_share-link" href="https://plus.google.com/share?url=${context!}" target="_blank">
+                <a class="post_share-link" href="https://plus.google.com/share?url=${blog_url!}" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 Google+
                     </li>
@@ -83,7 +83,7 @@
             </#if>
 
             <#if settings.sns_share_linkedin!true>
-                <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${context!}&title=${blog_title!}" target="_blank">
+                <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${blog_url!}&title=${blog_title!}" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 LinkedIn
                     </li>
@@ -92,7 +92,7 @@
 
             <!-- Share QQ -->
             <#if settings.sns_share_qq!true>
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${blog_title!}&title=${blog_title!}&summary=${options.seo_description!}&pics=${options.blog_favicon!}&url=${context!}" target="_blank">
+                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${blog_title!}&title=${blog_title!}&summary=${options.seo_description!}&pics=${options.blog_favicon!}&url=${blog_url!}" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 QQ
                     </li>
@@ -100,7 +100,7 @@
             </#if>
 
             <#if settings.sns_share_telegram!true>
-                <a class="post_share-link" href="https://telegram.me/share/url?url=${context!}&text=${blog_title!}" target="_blank">
+                <a class="post_share-link" href="https://telegram.me/share/url?url=${blog_url!}&text=${blog_title!}" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 Telegram
                     </li>

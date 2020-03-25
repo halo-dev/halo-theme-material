@@ -17,7 +17,7 @@
         "@type": "WebPage",
         "@id": "${blog_url!}"
     },
-    "description": "${options.seo_description!}"
+    "description": "${meta_description!}"
 }
 </script>
 </#if>
@@ -48,8 +48,8 @@
             "url": "${settings.high_res_favicon!}"
         }
     },
-    "keywords": "${tagWords!}",
-    "description": "${post.summary!}",
+    "keywords": "${meta_keywords!}",
+    "description": "${meta_description!}",
 }
 </script>
 </#if>

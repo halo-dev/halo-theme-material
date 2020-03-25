@@ -32,7 +32,7 @@
         </span>
 
         <p class="header-slogan header-item">
-            ${options.uiux_slogan!'Hi,nice to meet you'}
+            ${settings.uiux_slogan!'Hi,nice to meet you'}
         </p>
 
         <!-- Header Nav -->
@@ -47,7 +47,7 @@
             <@menuTag method="list">
                 <#list menus?sort_by("priority") as menu>
                     <span class="header-nav-item">
-                        <a href="${menu.url!}" title="${menu.name!}">
+                        <a href="${menu.url!}" title="${menu.name!}" target="${menu.target!}">
                             <span>${menu.name!}</span>
                         </a>
                     </span>
