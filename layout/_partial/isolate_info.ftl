@@ -8,7 +8,7 @@
                     var fd = new Date();
                     document.write(fd.getFullYear());
                 </script>
-                &nbsp;${options.blog_title!}
+                &nbsp;${blog_title!}
             </div>
             <!--
             I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
@@ -26,19 +26,19 @@
 
         <!-- Header Title -->
         <span class="header-title header-item">
-            <a href="${context!}" title="${options.blog_title!}">
-                ${options.blog_title!}
+            <a href="${blog_url!}" title="${blog_title!}">
+                ${blog_title!}
             </a>
         </span>
 
         <p class="header-slogan header-item">
-            ${options.uiux_slogan!'Hi,nice to meet you'}
+            ${settings.uiux_slogan!'Hi,nice to meet you'}
         </p>
 
         <!-- Header Nav -->
         <nav class="header-nav header-item">
             <span class="header-nav-item">
-                <a href="${context!}" title="Home">
+                <a href="${blog_url!}" title="Home">
                     <span>主页</span>
                 </a>
             </span>
@@ -47,7 +47,7 @@
             <@menuTag method="list">
                 <#list menus?sort_by("priority") as menu>
                     <span class="header-nav-item">
-                        <a href="${menu.url!}" title="${menu.name!}">
+                        <a href="${menu.url!}" title="${menu.name!}" target="${menu.target!}">
                             <span>${menu.name!}</span>
                         </a>
                     </span>

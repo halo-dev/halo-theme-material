@@ -1,5 +1,5 @@
 <#include "layout/layout.ftl">
-<@layout title="${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}">
+<@layout title="${blog_title!}" canonical="${blog_url!}">
     <!-- Index Module -->
     <div class="material-index mdl-grid">
         <#if (settings.scheme!'Paradox') == "Paradox" && posts.number==0 && is_index??>
@@ -18,8 +18,31 @@
             <#include "layout/_partial/Isolation-post_entry.ftl">
         </#if>
         <!-- Index nav -->
-        <#include "layout/_partial/index-nav.ftl">
-        <@nav url="${context!}/"></@nav>
+        <#if posts.totalPages gt 1 >
+            <nav class="material-nav mdl-cell mdl-cell--12-col">
+                <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+                    <#if pagination.hasPrev>
+                        <a class="extend prev" rel="prev" href="${pagination.prevPageFullPath!}">
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons" role="presentation">arrow_back</i>
+                            </button>
+                        </a>
+                    </#if>
+                    <#list pagination.rainbowPages as number>
+                        <#if number.isCurrent>
+                            <span class="page-number current">${number.page!}</span>
+                        </#if>
+                    </#list>
+                    <#if pagination.hasNext>
+                        <a class="extend next" rel="next" href="${pagination.nextPageFullPath!}">
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons" role="presentation">arrow_forward</i>
+                            </button>
+                        </a>
+                    </#if>
+                </@paginationTag>
+            </nav>
+        </#if>
         <#if (settings.scheme!'Paradox') == "Paradox">
             <#include "layout/_partial/Paradox-post_entry-thumbnail.ftl">
         </#if>

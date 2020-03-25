@@ -1,8 +1,8 @@
-<#macro layout title,keywords,description,canonical>
+<#macro layout title,canonical>
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
     <#include "_partial/head.ftl">
-    <@head title="${title}" keywords="${keywords}" description="${description}" canonical="${canonical}"></@head>
+    <@head title="${title}" canonical="${canonical}"></@head>
 
     <body id="scheme-${settings.scheme!'Paradox'}" class="lazy">
         <div class="material-layout  mdl-js-layout has-drawer is-upgraded">

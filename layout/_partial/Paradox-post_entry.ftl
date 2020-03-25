@@ -15,7 +15,7 @@
     </#if>
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="${context!}/archives/${post.url!}"><#if post.topPriority?? && post.topPriority!=0><span>[Top]</span></#if>${post.title!}</a></p>
+        <p class="article-headline-p"><a href="${post.fullPath!}"><#if post.topPriority?? && post.topPriority!=0><span>[Top]</span></#if>${post.title!}</a></p>
     </div>
 
     <!-- Post Excerpt -->
@@ -23,7 +23,7 @@
         ${post.summary!}
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="${context!}/archives/${post.url}" target="_self">阅读全文</a>
+            <a href="${post.fullPath!}" target="_self">阅读全文</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -31,7 +31,7 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="${user.avatar!'${static!}/source/img/avatar.png'}" width="44px" height="44px" alt="${user.nickname!}'s avatar">
+                <img src="${user.avatar!'${theme_base!}/source/img/avatar.png'}" width="44px" height="44px" alt="${user.nickname!}'s avatar">
             </div>
             <div>
                 <strong>${user.nickname!}</strong>
@@ -43,7 +43,7 @@
               <!-- Category -->
               <span class="post_entry-category">
                   <#list post.categories as cate>
-                      <a class="post_category-link" href="${context!}/categories/${cate.slugName}/">${cate.name}</a>
+                      <a class="post_category-link" href="${cate.fullPath!}">${cate.name}</a>
                   </#list>
               </span>
             </#if>

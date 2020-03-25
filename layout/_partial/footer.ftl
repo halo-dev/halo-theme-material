@@ -6,7 +6,7 @@
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;${options.blog_title!}
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;${blog_title!}
             <br>
             <@global.footer />
         </div>

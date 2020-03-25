@@ -6,7 +6,7 @@
 
     <!-- Share Weibo -->
     <#if settings.sns_share_weibo!true>
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${post.title}&url=${context!}/archives/${post.url}&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=${post.title!}&url=${post.fullPath!}&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -15,7 +15,7 @@
 
     <!-- Share Twitter -->
     <#if settings.sns_share_twitter!true>
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${post.title}&url=<${post.title}&url=${context!}/archives/${post.url}&via=${user.nickname!'Halo'}" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=${post.title!}&url=<${post.title!}&url=${post.fullPath!}&via=${user.nickname!'Halo'}" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -24,7 +24,7 @@
 
     <!-- Share Facebook -->
     <#if settings.sns_share_facebook!true>
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${context!}/archives/${post.url}" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=${post.fullPath!}" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -33,7 +33,7 @@
 
     <!-- Share Google+ -->
     <#if settings.sns_share_googleplus!true>
-        <a class="post_share-link" href="https://plus.google.com/share?url=${context!}/archives/${post.url}" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=${post.fullPath!}" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -42,7 +42,7 @@
 
     <!-- Share LinkedIn -->
     <#if settings.sns_share_linkedin!true>
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${context!}/archives/${post.url}&title=${post.title}" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=${post.fullPath!}&title=${post.title!}" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -51,7 +51,7 @@
 
     <!-- Share QQ -->
     <#if settings.sns_share_qq!true>
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${options.blog_title!}&title=${post.title}&summary=${post.summary!}&pics=&url=${context!}/archives/${post.url}" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=${blog_title!}&title=${post.title!}&summary=${post.summary!}&pics=&url=${post.fullPath!}" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -60,7 +60,7 @@
 
     <!-- Share Telegram -->
     <#if settings.sns_share_telegram!true>
-        <a class="post_share-link" href="https://telegram.me/share/url?url=${context!}/archives/${post.url}&text=${post.title}" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=${post.fullPath!}&text=${post.title!}" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>

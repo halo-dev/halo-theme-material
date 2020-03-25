@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="${static!}/source/css/gallery.min.css">
+<link rel="stylesheet" href="${theme_base!}/source/css/gallery.min.css">
 <body>
     <!-- Wrapper -->
     <div id="wrapper">
@@ -6,7 +6,7 @@
         <!-- Header -->
         <header id="header">
             <h1>
-                <a href="${context!}"><strong>${options.blog_title!}</strong></a> - 图库
+                <a href="${blog_url!}"><strong>${blog_title!}</strong></a> - 图库
             </h1>
             <nav>
                 <ul>
@@ -77,8 +77,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="${static!}/source/js/gallery/gallery.js"></script>
-    <script>lsloader.load("lazyload_js","${static!}/source/js/lazyload.min.js", true)</script>
+    <script src="${theme_base!}/source/js/gallery/gallery.js"></script>
+    <script>lsloader.load("lazyload_js","${theme_base!}/source/js/lazyload.min.js", true)</script>
 
     <script>
         queue.offer(function(){
