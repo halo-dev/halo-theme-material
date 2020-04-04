@@ -5,13 +5,8 @@
         <div class="locate-thumbnail-symbol"></div>
 
         <!-- Normal Post -->
-        <#if (settings.scheme!'Paradox') == "Paradox">
-            <!-- Paradox Thumbnail -->
-            <#include "layout/_partial/Paradox-post_entry.ftl">
-        <#else>
-            <!-- Isolation Thumbnail -->
-            <#include "layout/_partial/Isolation-post_entry.ftl">
-        </#if>
+        <!-- Paradox Thumbnail -->
+        <#include "layout/_partial/Paradox-post_entry.ftl">
         <!-- Index nav -->
         <#if posts.totalElements gt 0>
             <nav class="material-nav mdl-cell mdl-cell--12-col">
@@ -34,8 +29,6 @@
                 </@paginationTag>
             </nav>
         </#if>
-        <#if (settings.scheme!'Paradox') == "Paradox">
-            <#include "layout/_partial/Paradox-post_entry-thumbnail.ftl">
-        </#if>
+        <#include "layout/_partial/Paradox-post_entry-thumbnail.ftl">
     </div>
 </@layout>

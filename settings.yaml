@@ -1,17 +1,6 @@
 general:
   label: 基础设置
   items:
-    scheme:
-      name: scheme
-      label: 主题样式
-      type: select
-      default: Paradox
-      options:
-        - value: Paradox
-          label: Paradox
-        - value: Isolation
-          label: Isolation
-
     favicon:
       name: favicon
       label: Favicon

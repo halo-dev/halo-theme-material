@@ -9,18 +9,11 @@
                 <!-- Post Header(Thumbnail & Title) -->
                 <#include "layout/_partial/post-header.ftl">
 
-                <#if (settings.scheme!'Paradox') == "Paradox">
-                    <!-- Paradox Post Info -->
-                    <#include "layout/_partial/Paradox-post-info.ftl">
-                </#if>
+                <!-- Paradox Post Info -->
+                <#include "layout/_partial/Paradox-post-info.ftl">
 
                 <!-- Post Content -->
                 <#include "layout/_partial/post-content.ftl">
-
-                <#if (settings.scheme!'Paradox') == "Isolation">
-                    <!-- Paradox Post Info -->
-                    <#include "layout/_partial/Isolation-post-info.ftl">
-                </#if>
 
                 <!-- Post Comments -->
                 <#include "layout/_partial/comment.ftl">

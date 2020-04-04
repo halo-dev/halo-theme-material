@@ -1,5 +1,4 @@
-<#if (settings.scheme!'Paradox') == "Paradox">
-    <!-- Back Button -->
+<!-- Back Button -->
 <#--    <div class="material-back" id="backhome-div" tabindex="0">-->
 <#--        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"-->
 <#--           href="#" onclick="window.history.back();return false;"-->
@@ -12,7 +11,7 @@
 <#--            </span>-->
 <#--        </a>-->
 <#--    </div>-->
-    <!-- Left aligned menu below button -->
+<!-- Left aligned menu below button -->
 <#--    <button id="post-toc-trigger-btn"-->
 <#--            class="mdl-button mdl-js-button mdl-button--icon">-->
 <#--        <i class="material-icons">format_list_numbered</i>-->
@@ -21,4 +20,3 @@
 <#--    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">-->
 
 <#--    </ul>-->
-</#if>

@@ -12,7 +12,7 @@ It will not impact the appearance and can give developers a lot of support :)
 <div class="sidebar-divider"></div>
 
 <!-- Theme Material -->
-<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+<a href="https://github.com/halo-dev/halo-theme-material"  class="sidebar-footer-text-a" target="_blank">
     <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
         主题 - Material
         <span class="sidebar-badge badge-circle">i</span>

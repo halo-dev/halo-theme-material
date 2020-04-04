@@ -46,8 +46,8 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
-        <link rel="stylesheet" href="${theme_base!}/source/css/ie-blocker.css">
-        <script src="${theme_base!}/source/js/ie-blocker.zhCN.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ie-blocker@2.0.6/ie-blocker/ie-blocker.css">
+        <script src="https://cdn.jsdelivr.net/npm/ie-blocker@2.0.6/ie-blocker/ie-blocker.zhCN.js"></script>
     <![endif]-->
 
     <!-- Import lsloader -->
@@ -67,14 +67,10 @@
         </#if>
     </#if>
 
-    <#if (settings.scheme!'Paradox') == "Isolation">
-        <link rel="stylesheet" href="${theme_base!}/source/css/fontawesome.min.css">
-    </#if>
-
     <#include "../_partial/config_css.ftl">
 
     <!-- Import jQuery -->
-    <script>lsloader.load("jq_js","${theme_base!}/source/js/jquery.min.js", true)</script>
+    <script>lsloader.load("jq_js","https://cdn.jsdelivr.net/npm/jquery@2.2.0/dist/jquery.min.js", true)</script>
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
