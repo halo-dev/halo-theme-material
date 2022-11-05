@@ -1,0 +1,24 @@
+<script>
+  lsloader.load("np_js", "[[${#theme.assets('/js/nprogress.min.js')}]]", true);
+</script>
+
+<script type="text/javascript" id="NProgress-script">
+  NProgress.configure({
+      showSpinner: true
+  });
+  NProgress.start();
+  $('#nprogress .bar').css({
+      'background': '[[${theme.config.style.uiux_nprogress_color}]]'
+  });
+  $('#nprogress .peg').css({
+      'box-shadow': '0 0 10px [[${theme.config.style.uiux_nprogress_color}]], 0 0 15px [[${theme.config.style.uiux_nprogress_color}]]'
+  });
+  $('#nprogress .spinner-icon').css({
+      'border-top-color': '[[${theme.config.style.uiux_nprogress_color}]]',
+      'border-left-color': '[[${theme.config.style.uiux_nprogress_color}]]'
+  });
+  setTimeout(function() {
+      NProgress.done();
+      $('.fade').removeClass('out');
+  }, [[${theme.config.style.uiux_nprogress_buffer}]]);
+</script>

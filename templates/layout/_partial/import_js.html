@@ -1,0 +1,65 @@
+<!-- Import JS File -->
+<script>
+  lsloader.load("lazyload_js", "[[${#theme.assets('/js/lazyload.min.js')}]]", true);
+</script>
+<script>
+  lsloader.load("js_js", "[[${#theme.assets('/js/js.min.js')}]]", true);
+</script>
+
+<th:block th:replace="~{layout/_widget/nprogress}" />
+
+<script th:if="${theme.config.other.js_smoothscroll}">
+  lsloader.load("sm_js", "[[${#theme.assets('/js/smoothscroll.js')}]]", true);
+</script>
+
+<!-- Window Load -->
+<script type="text/javascript" id="window-load">
+  $(window).on("load", function () {
+    // Post_Toc parent position fixed
+    $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+  });
+</script>
+
+<script type="text/javascript" id="lazy-load">
+  // Offer LazyLoad
+  queue.offer(function () {
+    $(".lazy").lazyload({
+      effect: "show",
+    });
+  });
+
+  // Start Queue
+  $(document).ready(function () {
+    setInterval(function () {
+      queue.execNext();
+    }, 200);
+  });
+</script>
+
+<!-- Custom Footer -->
+
+<script>
+  // var copyrightNow = new Date().getFullYear();
+  // var textContent = document.querySelector('span[year]')
+
+  // copyrightSince = ${(options.birthday)?number_to_date?string("yyyy")};
+  // if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+  //     textContent.textContent = copyrightNow
+  // } else {
+  //     textContent.textContent = copyrightSince + ' - ' + copyrightNow
+  // }
+
+  // (function(){
+  //     var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+  //     for (var i = 0; i < scriptList.length; ++i) {
+  //         var item = scriptList[i];
+  //         lsloader.runInlineScript(item.id,item.id);
+  //     }
+  // })()
+  console.log(
+    "\n %c © Material Theme | Version: ${theme.version!} | https://github.com/halo-dev/halo-theme-material %c \n",
+    "color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;",
+    "color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;"
+  );
+</script>

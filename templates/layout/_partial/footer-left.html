@@ -1,0 +1,104 @@
+<div class="mdl-mini-footer--left-section sns-list">
+  <!-- Twitter -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.twitter)}" th:href="${theme.config.sns.twitter}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+      <span class="visuallyhidden">Twitter</span>
+    </button>
+  </a>
+
+  <!-- Facebook -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.facebook)}" th:href="${theme.config.sns.facebook}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+      <span class="visuallyhidden">Facebook</span>
+    </button>
+  </a>
+
+  <!-- Google + -->
+  <a
+    th:if="not ${#strings.isEmpty(theme.config.sns.googleplus)}"
+    thhref="${theme.config.sns.googleplus}"
+    target="_blank"
+  >
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+      <span class="visuallyhidden">Google Plus</span>
+    </button>
+  </a>
+
+  <!-- Weibo -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.weibo)}" th:href="${theme.config.sns.weibo}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+      <span class="visuallyhidden">Weibo</span>
+    </button>
+  </a>
+
+  <!-- Instagram -->
+  <a
+    th:if="not ${#strings.isEmpty(theme.config.sns.instagram)}"
+    th:href="${theme.config.sns.instagram}"
+    target="_blank"
+  >
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+      <span class="visuallyhidden">Instagram</span>
+    </button>
+  </a>
+
+  <!-- Tumblr -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.tumblr)}" th:href="${theme.config.sns.tumblr}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-tumblr">
+      <span class="visuallyhidden">Tumblr</span>
+    </button>
+  </a>
+
+  <!-- GitHub -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.github)}" th:href="${theme.config.sns.github}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+      <span class="visuallyhidden">Github</span>
+    </button>
+  </a>
+
+  <!-- LinkedIn -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.linkedin)}" th:href="${theme.config.sns.linkedin}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-linkedin">
+      <span class="visuallyhidden">LinkedIn</span>
+    </button>
+  </a>
+
+  <!-- Zhihu -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.zhihu)}" th:href="${theme.config.sns.zhihu}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+      <span class="visuallyhidden">Zhihu</span>
+    </button>
+  </a>
+
+  <!-- Bilibili -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.bilibili)}" th:href="${theme.config.sns.bilibili}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+      <span class="visuallyhidden">Bilibili</span>
+    </button>
+  </a>
+
+  <!-- Telegram -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.telegram)}" th:href="${theme.config.sns.telegram}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+      <span class="visuallyhidden">Telegram</span>
+    </button>
+  </a>
+
+  <!-- V2EX -->
+  <a th:if="not ${#strings.isEmpty(theme.config.sns.v2ex)}" th:href="${theme.config.sns.v2ex}" target="_blank">
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+      <span class="visuallyhidden">V2EX</span>
+    </button>
+  </a>
+
+  <!-- Segmentfault -->
+  <a
+    th:if="not ${#strings.isEmpty(theme.config.sns.segmentfault)}"
+    th:href="${theme.config.sns.segmentfault}"
+    target="_blank"
+  >
+    <button class="mdl-mini-footer--social-btn social-btn footer-sns-segmentfault">
+      <span class="visuallyhidden">Segmentfault</span>
+    </button>
+  </a>
+</div>

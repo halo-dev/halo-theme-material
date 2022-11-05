@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{layout/layout :: html(content = ~{::content})}">
+  <th:block th:fragment="content">
+    <!-- Index Module -->
+    <div class="material-index mdl-grid" th:with="postItems=${posts.items}">
+      <!-- <#if posts.number==0 && is_index??> -->
+      <!-- Paradox Header -->
+      <th:block th:replace="~{layout/_partial/daily_pic}" />
+      <th:block th:replace="~{layout/_partial/blog_info}" />
+      <!-- </#if> -->
+      <div class="locate-thumbnail-symbol"></div>
+
+      <!-- Normal Post -->
+      <!-- Paradox Thumbnail -->
+      <th:block th:each="post : ${postItems}">
+        <th:block th:replace="~{layout/_partial/Paradox-post_entry :: post-entry(${post})}" />
+      </th:block>
+      <!-- Index nav -->
+      <!-- <#if posts.totalPages gt 1 >
+        <nav class="material-nav mdl-cell mdl-cell--12-col">
+            <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <#if pagination.hasPrev>
+                    <a class="extend prev" rel="prev" href="${pagination.prevPageFullPath!}">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons" role="presentation">arrow_back</i>
+                        </button>
+                    </a>
+                </#if>
+                <#list pagination.rainbowPages as number>
+                    <#if number.isCurrent>
+                        <span class="page-number current">${number.page!}</span>
+                    </#if>
+                </#list>
+                <#if pagination.hasNext>
+                    <a class="extend next" rel="next" href="${pagination.nextPageFullPath!}">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons" role="presentation">arrow_forward</i>
+                        </button>
+                    </a>
+                </#if>
+            </@paginationTag>
+        </nav>
+    </#if>
+    <#include "layout/_partial/Paradox-post_entry-thumbnail.ftl"> -->
+    </div>
+  </th:block>
+</html>

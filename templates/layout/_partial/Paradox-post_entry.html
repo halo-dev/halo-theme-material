@@ -1,0 +1,91 @@
+<div
+  th:fragment="post-entry(post)"
+  class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out"
+  th:classappend="'mdl-shadow--'+${theme.config.style.uiux_card_elevation}+'dp'"
+>
+  <!-- Post Thumbnail -->
+  <th:block th:if="${#strings.isEmpty(post.spec.cover)}">
+    <th:block th:if="${#strings.isEmpty(theme.config.style.thumbnail_purecolor)}">
+      <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        <p class="article-headline-p">
+          <a th:href="@{${post.status.permalink}}"
+            ><span th:if="${post.spec.pinned}">[Top]</span><th:block th:text="${post.spec.title}"></th:block
+          ></a>
+        </p>
+      </div>
+    </th:block>
+
+    <th:block th:if="${not #strings.isEmpty(theme.config.style.thumbnail_purecolor)}">
+      <div
+        class="post-thumbnail-pure mdl-card__media mdl-color-text--grey-50"
+        th:style="'background-color:'+${theme.config.style.thumbnail_purecolor}+' !important'"
+      >
+        <p class="article-headline-p">
+          <a th:href="@{${post.status.permalink}}"
+            ><span th:if="${post.spec.pinned}">[Top]</span><th:block th:text="${post.spec.title}"></th:block
+          ></a>
+        </p>
+      </div>
+    </th:block>
+  </th:block>
+
+  <th:block th:if="${not #strings.isEmpty(post.spec.cover)}">
+    <div
+      class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy"
+      th:attr="data-original=${post.spec.cover}"
+    >
+      <p class="article-headline-p">
+        <a th:href="@{${post.status.permalink}}"
+          ><span th:if="${post.spec.pinned}">[Top]</span><th:block th:text="${post.spec.title}"></th:block
+        ></a>
+      </p>
+    </div>
+  </th:block>
+
+  <!-- Post Excerpt -->
+  <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+    <th:block th:text="${post.status.excerpt}"></th:block>
+    &nbsp;&nbsp;&nbsp;
+    <span>
+      <a th:href="@{${post.status.permalink}}" target="_self">阅读全文</a>
+    </span>
+  </div>
+  <!-- Post_entry Info-->
+  <div id="post_entry-info">
+    <div
+      id="post_entry-left-info"
+      class="mdl-card__supporting-text meta mdl-color-text--grey-600"
+      th:with="contributor = ${post.contributors[0]}"
+    >
+      <!-- Author Avatar -->
+      <div id="author-avatar">
+        <img
+          th:src="${contributor.avatar}"
+          width="44px"
+          height="44px"
+          th:alt="${contributor.displayName}+'\'s avatar'"
+        />
+      </div>
+      <div>
+        <strong th:text="${contributor.displayName}"></strong>
+        <span th:text="${#dates.format(post.spec.publishTime,'MM月 dd,yyyy')}"></span>
+      </div>
+    </div>
+    <div id="post_entry-right-info">
+      <th:block th:if="${not #lists.isEmpty(post.categories)}">
+        <!-- Category -->
+        <span class="post_entry-category">
+          <a
+            th:each="category : ${post.categories}"
+            class="post_category-link"
+            th:href="${category.status.permalink}"
+            th:text="${category.spec.displayName}"
+          ></a>
+        </span>
+      </th:block>
+
+      <!-- Post Views -->
+      <span class="post_entry-views"> </span>
+    </div>
+  </div>
+</div>

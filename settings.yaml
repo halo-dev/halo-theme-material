@@ -1,479 +1,232 @@
-general:
-  label: 基础设置
-  items:
-    favicon:
-      name: favicon
-      label: Favicon
-      type: attachment
-
-    high_res_favicon:
-      name: high_res_favicon
-      label: 高清 Favicon
-      type: attachment
-
-    apple_touch_icon:
-      name: apple_touch_icon
-      label: IOS 主屏按钮图标
-      type: attachment
-
-    daily_pic:
-      name: daily_pic
-      label: 首页头图
-      type: attachment
-
-    sidebar_header:
-      name: sidebar_header
-      label: Sidebar 顶部图片
-      type: attachment
-
-    footer_image:
-      name: footer_image
-      label: Sidebar 底部图片
-      type: attachment
-
-style:
-  label: 样式设置
-  items:
-    uiux_slogan:
-      name: uiux_slogan
-      label: 首页 Slogan
-      type: text
-      default: 'Hi, nice to meet you'
-
-    uiux_card_elevation:
-      name: uiux_card_elevation
-      label: 卡片深度
-      type: text
-      default: '2'
-
-    uiux_theme_color:
-      name: uiux_theme_color
-      label: 主题颜色
-      type: color
-      default: '#0097A7'
-
-    uiux_theme_sub_color:
-      name: uiux_theme_sub_color
-      label: 辅助颜色
-      type: color
-      default: '#00838F'
-
-    uiux_hyperlink_color:
-      name: uiux_hyperlink_color
-      label: 超链接颜色
-      type: color
-      default: '#00838F'
-
-    uiux_button_color:
-      name: uiux_button_color
-      label: 按钮颜色
-      type: color
-      default: '#757575'
-
-    uiux_android_chrome_color:
-      name: uiux_android_chrome_color
-      label: 安卓 Chrome 颜色
-      type: color
-      default: '#0097A7'
-
-    uiux_nprogress_color:
-      name: uiux_nprogress_color
-      label: NProgress 颜色
-      type: color
-      default: '#29d'
-
-    uiux_nprogress_buffer:
-      name: uiux_nprogress_buffer
-      label: NProgress 速度
-      type: text
-      default: '800'
-
-    background_purecolor:
-      name: background_purecolor
-      label: 背景颜色
-      type: color
-      default: '#F5F5F5'
-
-    thumbnail_purecolor:
-      name: thumbnail_purecolor
-      label: 文章缩略图背景颜色
-      type: color
-
-    background_bgimg:
-      name: background_bgimg
-      label: 背景图片
-      type: attachment
-
-    background_bing:
-      name: background_bing
-      label: Bing 背景
-      type: radio
-      data-type: bool
-      default: false
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    prettify_enable:
-      name: prettify_enable
-      label: Prettify 代码高亮插件
-      type: radio
-      data-type: bool
-      default: false
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    prettify_theme:
-      name: prettify_theme
-      label: Prettify 代码高亮主题
-      type: select
-      default: github-v2
-      options:
-        - value: atelier-seaside-dark
-          label: atelier-seaside-dark
-        - value: atelier-plateau-light
-          label: atelier-plateau-light
-        - value: atelier-sulphurpool-dark
-          label: atelier-sulphurpool-dark
-        - value: tomorrow-night-blue
-          label: tomorrow-night-blue
-        - value: atelier-heath-dark
-          label: atelier-heath-dark
-        - value: vibrant-ink
-          label: vibrant-ink
-        - value: atelier-heath-light
-          label: atelier-heath-light
-        - value: atelier-dune-dark
-          label: atelier-dune-dark
-        - value: tranquil-heart
-          label: tranquil-heart
-        - value: atelier-estuary-light
-          label: atelier-estuary-light
-        - value: atelier-seaside-light
-          label: atelier-seaside-light
-        - value: tomorrow-night-eighties
-          label: tomorrow-night-eighties
-        - value: atelier-savanna-dark
-          label: atelier-savanna-dark
-        - value: atelier-forest-dark
-          label: atelier-forest-dark
-        - value: tomorrow-night
-          label: tomorrow-night
-        - value: atelier-lakeside-dark
-          label: atelier-lakeside-dark
-        - value: tomorrow
-          label: tomorrow
-        - value: atelier-forest-light
-          label: atelier-forest-light
-        - value: hemisu-dark
-          label: hemisu-dark
-        - value: github
-          label: github
-        - value: atelier-cave-light
-          label: atelier-cave-light
-        - value: github-v2
-          label: github-v2
-        - value: atelier-sulphurpool-light
-          label: atelier-sulphurpool-light
-        - value: atelier-plateau-dark
-          label: atelier-plateau-dark
-        - value: atelier-cave-dark
-          label: atelier-cave-dark
-        - value: tomorrow-night-bright
-          label: tomorrow-night-bright
-        - value: atelier-savanna-light
-          label: atelier-savanna-light
-        - value: atelier-estuary-dark
-          label: atelier-estuary-dark
-        - value: atelier-dune-light
-          label: atelier-dune-light
-        - value: atelier-lakeside-light
-          label: atelier-lakeside-light
-        - value: hemisu-light
-          label: hemisu-light
-
-    hanabi_enable:
-      name: hanabi_enable
-      label: Hanabi 代码高亮插件
-      type: radio
-      data-type: bool
-      default: false
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    hanabi_line_number:
-      name: hanabi_line_number
-      label: Hanabi 是否显示行号
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    post_qrcode_enable:
-      name: post_qrcode_enable
-      label: 文章二维码
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-sns:
-  label: 社交资料
-  items:
-    sns_email:
-      name: sns_email
-      label: Email
-      type: text
-
-    sns_facebook:
-      name: sns_facebook
-      label: Facebook
-      type: text
-
-    sns_twitter:
-      name: sns_twitter
-      label: Twitter
-      type: text
-
-    sns_googleplus:
-      name: sns_googleplus
-      label: Google +
-      type: text
-
-    sns_weibo:
-      name: sns_weibo
-      label: 微博
-      type: text
-
-    sns_instagram:
-      name: sns_instagram
-      label: Instagram
-      type: text
-
-    sns_tumblr:
-      name: sns_tumblr
-      label: Tumblr
-      type: text
-
-    sns_github:
-      name: sns_github
-      label: Github
-      type: text
-
-    sns_linkedin:
-      name: sns_linkedin
-      label: Linkedin
-      type: text
-
-    sns_zhihu:
-      name: sns_zhihu
-      label: 知乎
-      type: text
-
-    sns_bilibili:
-      name: sns_bilibili
-      label: 哔哩哔哩
-      type: text
-
-    sns_telegram:
-      name: sns_telegram
-      label: Telegram
-      type: text
-
-    sns_v2ex:
-      name: sns_v2ex
-      label: V2EX
-      type: text
-
-    sns_segmentfault:
-      name: sns_segmentfault
-      label: Segmentfault
-      type: text
-
-sns-share:
-  label: 分享设置
-  items:
-    sns_share_twitter:
-      name: sns_share_twitter
-      label: 分享到 Twitter
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    sns_share_facebook:
-      name: sns_share_facebook
-      label: 分享到 Facebook
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    sns_share_googleplus:
-      name: sns_share_googleplus
-      label: 分享到 Google +
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    sns_share_weibo:
-      name: sns_share_weibo
-      label: 分享到微博
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    sns_share_linkedin:
-      name: sns_share_linkedin
-      label: 分享到 Linkedin
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    sns_share_qq:
-      name: sns_share_qq
-      label: 分享到 QQ
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    sns_share_telegram:
-      name: sns_share_telegram
-      label: 分享到 Telegram
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-other:
-  label: 其他设置
-  items:
-    other_js_fade:
-      name: other_js_fade
-      label: 渐显效果
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    other_js_smoothscroll:
-      name: other_js_smoothscroll
-      label: 平滑滚动效果
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-#    other_sidebar_archives:
-#      name: other_sidebar_archives
-#      label: 侧边栏归档
-#      type: radio
-#      data-type: bool
-#      default: true
-#      options:
-#        - value: true
-#          label: 开启
-#        - value: false
-#          label: 关闭
-
-    other_sidebar_cates:
-      name: other_sidebar_cates
-      label: 侧边栏分类
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    other_sidebar_postcount:
-      name: other_sidebar_postcount
-      label: 侧边栏文章总数
-      type: radio
-      data-type: bool
-      default: true
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    other_mathjax:
-      name: other_mathjax
-      label: MathJax 插件
-      type: radio
-      data-type: bool
-      default: false
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
-
-    other_post_license:
-      name: other_post_license
-      label: 文章 License
-      type: textarea
-
-    sidebar_footer_content:
-      name: sidebar_footer_content
-      label: 侧边栏底部内容
-      type: textarea
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: theme-material-setting
+spec:
+  forms:
+    - group: general
+      label: 基础设置
+      formSchema:
+        - $formkit: attachment
+          name: daily_pic
+          label: 首页头图
+        - $formkit: attachment
+          name: sidebar_header
+          label: Sidebar 顶部图片
+        - $formkit: attachment
+          name: footer_image
+          label: Sidebar 底部图片
+    - group: style
+      label: 样式设置
+      formSchema:
+        - $formkit: text
+          name: uiux_slogan
+          label: 首页 Slogan
+          value: Hi, nice to meet you
+        - $formkit: text
+          name: uiux_card_elevation
+          label: 卡片深度
+          value: "2"
+        - $formkit: color
+          name: uiux_theme_color
+          label: 主题颜色
+          value: "#0097A7"
+        - $formkit: color
+          name: uiux_theme_sub_color
+          label: 辅助颜色
+          value: "#00838F"
+        - $formkit: color
+          name: uiux_hyperlink_color
+          label: 超链接颜色
+          value: "#00838F"
+        - $formkit: color
+          name: uiux_button_color
+          label: 按钮颜色
+          value: "#757575"
+        - $formkit: color
+          name: uiux_android_chrome_color
+          label: 安卓 Chrome 颜色
+          value: "#0097A7"
+        - $formkit: color
+          name: uiux_nprogress_color
+          label: NProgress 颜色
+          value: "#29d"
+        - $formkit: text
+          name: uiux_nprogress_buffer
+          label: NProgress 速度
+          value: "800"
+        - $formkit: color
+          name: background_purecolor
+          label: 背景颜色
+          value: "#F5F5F5"
+        - $formkit: color
+          name: thumbnail_purecolor
+          label: 文章缩略图背景颜色
+        - $formkit: text
+          name: background_bgimg
+          label: 背景图片
+        - $formkit: radio
+          name: post_qrcode_enable
+          label: 文章二维码
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+    - group: sns
+      label: 社交资料
+      formSchema:
+        - $formkit: text
+          name: email
+          label: Email
+        - $formkit: text
+          name: facebook
+          label: Facebook
+        - $formkit: text
+          name: twitter
+          label: Twitter
+        - $formkit: text
+          name: googleplus
+          label: Google +
+        - $formkit: text
+          name: weibo
+          label: 微博
+        - $formkit: text
+          name: instagram
+          label: Instagram
+        - $formkit: text
+          name: tumblr
+          label: Tumblr
+        - $formkit: text
+          name: github
+          label: Github
+        - $formkit: text
+          name: linkedin
+          label: Linkedin
+        - $formkit: text
+          name: zhihu
+          label: 知乎
+        - $formkit: text
+          name: bilibili
+          label: 哔哩哔哩
+        - $formkit: text
+          name: telegram
+          label: Telegram
+        - $formkit: text
+          name: v2ex
+          label: V2EX
+        - $formkit: text
+          name: segmentfault
+          label: Segmentfault
+    - group: sns-share
+      label: 分享设置
+      formSchema:
+        - $formkit: radio
+          name: sns_share_twitter
+          label: 分享到 Twitter
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: sns_share_facebook
+          label: 分享到 Facebook
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: sns_share_googleplus
+          label: 分享到 Google +
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: sns_share_weibo
+          label: 分享到微博
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: sns_share_linkedin
+          label: 分享到 Linkedin
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: sns_share_qq
+          label: 分享到 QQ
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: sns_share_telegram
+          label: 分享到 Telegram
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+    - group: other
+      label: 其他设置
+      formSchema:
+        - $formkit: radio
+          name: other_js_fade
+          label: 渐显效果
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: js_smoothscroll
+          label: 平滑滚动效果
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: other_sidebar_cates
+          label: 侧边栏分类
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: other_sidebar_postcount
+          label: 侧边栏文章总数
+          value: true
+          options:
+            - value: true
+              label: 开启
+            - value: false
+              label: 关闭
+        - $formkit: textarea
+          name: other_post_license
+          label: 文章 License
+        - $formkit: textarea
+          name: sidebar_footer_content
+          label: 侧边栏底部内容
