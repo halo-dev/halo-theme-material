@@ -1,0 +1,41 @@
+<#include "layout/layout.ftl">
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{layout/layout :: html(content = ~{::content})}">
+  <th:block th:fragment="content">
+    <!-- Post TOC -->
+    <!-- <#if post.topPriority?? && post.topPriority!=0>
+    </#if> -->
+
+    <th:block th:if="${post.spec.pinned}">
+      <!-- <#include "layout/_partial/toc_button.ftl"> -->
+    </th:block>
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+      <div class="material-post mdl-grid">
+        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+          <!-- Post Header(Thumbnail & Title) -->
+          <th:block th:replace="~{layout/_partial/post-header :: post-header(${post})}" />
+
+          <!-- Paradox Post Info -->
+          <th:block th:replace="~{layout/_partial/Paradox-post-info :: Paradox-post-info(${post})}" />
+          <!-- Post Content -->
+          <th:block th:replace="~{layout/_partial/post-content :: post-content(${post})}" />
+
+          <!-- Post Comments -->
+          <div class="comment-wrapper" style="padding: 1pc">
+            <halo:comment
+              group="content.halo.run"
+              kind="Post"
+              th:attr="name=${post.metadata.name}"
+              colorScheme="'light'"
+            />
+          </div>
+        </div>
+
+        <!-- Post Prev & Next Nav -->
+        <th:block th:replace="~{layout/_partial/post-nav}" />
+      </div>
+    </div>
+  </th:block>
+</html>

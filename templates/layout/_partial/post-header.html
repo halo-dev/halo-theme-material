@@ -1,0 +1,30 @@
+<th:block th:fragment="post-header(post)">
+  <th:block th:if="${not #strings.isEmpty(post.spec.cover)}">
+    <!-- Custom Thumbnail -->
+    <div
+      class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50"
+      th:style="'background-image: url('+${post.spec.cover}+');'"
+    >
+      <p class="article-headline-p" th:text="${post.spec.title}"></p>
+    </div>
+  </th:block>
+  <th:block th:if="${#strings.isEmpty(post.spec.cover)}">
+    <th:block th:if="${#strings.isEmpty(theme.config.style.thumbnail_purecolor)}">
+      <!-- Random Thumbnail -->
+      <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        <th:block th:replace="~{layout/_partial/Paradox-post-thumbnail}" />
+        <p class="article-headline-p" th:text="${post.spec.title}"></p>
+      </div>
+    </th:block>
+
+    <th:block th:if="${not #strings.isEmpty(theme.config.style.thumbnail_purecolor)}">
+      <!-- Pure Thumbnail -->
+      <div
+        class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50"
+        th:style="'background-color:'+${theme.config.style.thumbnail_purecolor}+' !important'"
+      >
+        <p class="article-headline-p" th:text="${post.spec.title}"></p>
+      </div>
+    </th:block>
+  </th:block>
+</th:block>

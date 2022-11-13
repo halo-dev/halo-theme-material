@@ -1,13 +1,18 @@
-<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
+<th:block th:fragment="Paradox-post-info(post)">
+  <div th:with="contributor = ${post.contributors[0]}" class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="${user.avatar!'${theme_base!}/source/img/avatar.png'}" width="44px" height="44px" alt="Author Avatar"/>
+      <img
+        th:src="${contributor.avatar ?: #theme.assets('/img/avatar.png')}"
+        width="44px"
+        height="44px"
+        alt="Author Avatar"
+      />
     </div>
     <!-- Author Name & Date -->
     <div>
-        <strong>${user.nickname!}</strong>
-        <span>${post.createTime?string("MM月 dd,yyyy")}</span>
+      <strong th:text="${contributor.displayName}"></strong>
+      <span th:text="${#dates.format(post.spec.publishTime,'MM月 dd,yyyy')}"></span>
     </div>
 
     <div class="section-spacer"></div>
@@ -21,25 +26,30 @@
     -->
 
     <!-- Qrcode -->
-    <#if settings.post_qrcode_enable!true>
-        <#include "../_widget/qrcode.ftl">
-    </#if>
+    <th:block th:if="${theme.config.style.post_qrcode_enable}">
+      <th:block th:replace="~{layout/_widget/qrcode}" />
+    </th:block>
 
     <!-- Tags (bookmark) -->
-    <#if post.tags?? && post.tags?size gt 0>
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <th:block th:if="${not #lists.isEmpty(post.tags)}">
+      <button
+        id="article-functions-viewtags-button"
+        class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+      >
         <i class="material-icons" role="presentation">bookmark</i>
         <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <#list post.tags as tag>
-            <li class="mdl-menu__item">
-                <a class="post_tag-link" href="${tag.fullPath!}">${tag.name}</a>
-            </li>
-        </#list>
-    </ul>
-    </#if>
+      </button>
+      <ul
+        class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+        for="article-functions-viewtags-button"
+      >
+        <li th:each="tag : ${post.tags}" class="mdl-menu__item">
+          <a class="post_tag-link" th:href="${tag.status.permalink}" th:text="${tag.spec.displayName}"></a>
+        </li>
+      </ul>
+    </th:block>
 
     <!-- Share -->
-    <#include "../_partial/post-info-share.ftl">
-</div>
+    <th:block th:replace="~{layout/_partial/post-info-share :: post-info-share(${post})}" />
+  </div>
+</th:block>
